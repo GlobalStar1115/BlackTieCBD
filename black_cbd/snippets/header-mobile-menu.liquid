@@ -1,0 +1,145 @@
+<header-drawer data-breakpoint="tablet">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+      <span>
+        {% render 'icon-hamburger' %}
+        {% render 'icon-close' %}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
+      <div class="menu-drawer__inner-container">
+        <div class="menu-drawer__navigation-container">
+          <nav class="menu-drawer__navigation">
+            {%- comment -%}Removed class has-submenu {%- endcomment -%}
+            {%- for link in section.settings.mobile_menu.links -%}
+              <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                {%- for childlink in link.links -%}
+                  {%- liquid
+                    assign menu_block = null
+                    for block in section.blocks
+                      case block.type
+                        when 'mega_menu'
+                        if block.settings.parent == childlink.title
+                          assign menu_block = block
+                        endif
+                      endcase                                      
+                    endfor
+                  -%}
+                  <li>
+                    {%- if menu_block == blank -%}
+                      <a href="{{ childlink.url }}" class="parent-menu menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                        {{ childlink.title | escape }}
+                      </a>
+                    {%- else -%}
+                      <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
+                        <summary class="parent-menu menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                          {{ childlink.title | escape }}
+                          {% render 'icon-arrow' %}
+                          {% render 'icon-caret' %}
+                        </summary>
+                        {%- comment -%} REmoved class has-submenu{%- endcomment -%}
+                        <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu  gradient motion-reduce">
+                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                            {%- for submenu in menu_block.settings.menu.links -%}
+                              <li>
+                                {%- if submenu.links == blank -%}
+                                  <a href="{{ submenu.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if submenu.current %} menu-drawer__menu-item--active{% endif %}"{% if submenu.current %} aria-current="page"{% endif %}>
+                                    {{ submenu.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
+                                    <summary class="child-menu menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                      {% render 'icon-plus' %}
+                                      {% render 'icon-minus' %}
+                                      {{ submenu.title | escape }}
+                                    </summary>
+                                    {%- comment -%} REmoved class has-submenu{%- endcomment -%}
+                                    <div id="grandchild-{{ submenu.title | escape }}" class="menu-drawer__submenu  gradient motion-reduce">
+                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                        {%- for grandchildlink in submenu.links -%}
+                                          <li>
+                                            <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                              {{ grandchildlink.title | escape }}
+                                            </a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </div>
+                                  </details>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                            {% for i in (1..2) %}
+                              {%- capture menu_product -%}product__{{ i }}{%- endcapture -%}
+                              {%- capture menu_title -%}title__{{ i }}{%- endcapture -%}
+                              {%- if menu_block.settings[menu_product] != blank -%}
+                                {%- liquid
+                                  assign product = menu_block.settings[menu_product] 
+                                  assign title = menu_block.settings[menu_title] 
+                                  assign badge = product.metafields.eag_fields.product_badge 
+                                -%}
+                                <div class="child-menu child-menu-featured-product menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                  <div class="child-menu-featured-product_title">
+                                    {{ title }}
+                                  </div>
+                                  <div class="child-menu-featured-product-content">
+                                    {% if product.url != blank %}
+                                      <a href="{{ product.url }}" class="child-menu mega-menu_item__link">
+                                    {% endif %}
+                                    {% if product.url != blank %}
+                                      {% assign image = product.featured_image %}
+                                      <div class="child-menu-featured-product-content-image">
+                                        {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+                                        <img
+                                          srcset="{%- if image.src.width >= 165 -%}{{ image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                            {%- if image.src.width >= 360 -%}{{ image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                            {%- if image.src.width >= 533 -%}{{ image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                            {%- if image.src.width >= 720 -%}{{ image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                            {%- if image.src.width >= 1000 -%}{{ image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                                            {%- if image.src.width >= 1500 -%}{{ image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                            {{ image.src | image_url }} {{ image.src.width }}w"
+                                          src="{{ image.src | image_url: width: 533 }}"
+                                          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                                          alt="Image:{{ image.src.alt | escape }}"
+                                          class="motion-reduce"
+                                          {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                                          width="{{ image.width }}"
+                                          height="{{ image.height }}"
+                                        >
+                                      </div> 
+                                    {% endif %}           
+
+                                    {% if product.title != blank %}
+                                      {{ product.title }} →
+                                    {% endif %}
+
+                                    {% if product.url != blank %}
+                                      </a>            
+                                    {% endif %}
+                                  </div>
+                                  {% if badge %}
+                                    <span class="mega-menu_item__badge">{{ badge }}</span>
+                                  {% endif %}
+                                </div>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </details>
+                    {%- endif -%}
+                  </li>
+                </ul>
+                {%- endfor -%}
+              {%- endfor -%}
+              <li>
+                <a href="/collections/all" class="header-menu-btn-subscribe">SUBSCRIBE & SAVE</a>
+              </li>
+              </nav>
+          <div class="menu-drawer__utility-links">
+            {% render 'social-links' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

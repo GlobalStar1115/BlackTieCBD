@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "16578956874b133725": {
+      "type": "image-banner",
+      "blocks": {
+        "1657895687ff21577f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>CBD Blog<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "1657895687ff21577f-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/blacktie_7_9c61b40f-ad7d-4713-85b3-0f73628666bd.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "classname": "homepage",
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "show_read_more": true,
+        "show_blog_title": false,
+        "color_scheme": "background-1",
+        "menu": "blogs",
+        "padding_top": 48,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16578956874b133725",
+    "main"
+  ]
+}

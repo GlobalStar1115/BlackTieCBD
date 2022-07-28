@@ -1,0 +1,112 @@
+{{ 'component-review-rating.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .product-review-rating {
+    background-color: {{ section.settings.background_color }};
+  }
+  .product-review-rating .icon-radingstart-rating {
+    width: {{ section.settings.rate | times: 20 }}%;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="product-review-rating section-{{ section.id }}-padding section-{{ section.id }}-margin">
+  <div class="s-mod-product__star-rating__container">
+    <div class="product__star-rating_marks">{{ product.metafields.okendo.StarRatingSnippet }}</div>
+    <h1 class="product__star-rating_title">{{ product.metafields.okendo.summaryData.reviewAverageValue }} out of 5.0 stars</h1>
+    <div class="product__star-rating_context">We’re all about transparency. Read reviews by real people who use Black CBD. </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.product-star-rating.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#b3c8c6",
+      "label": "t:sections.product-star-rating.settings.background_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.margin.section_margin_heading"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name",
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}

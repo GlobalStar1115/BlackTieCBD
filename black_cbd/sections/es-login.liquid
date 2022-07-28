@@ -1,0 +1,435 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'section-customer-custom.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    :root {
+        --m-top-lg: {{ section.settings.m_top_lg | append: 'rem' }};
+        --m-bot-lg: {{ section.settings.m_bot_lg | append: 'rem' }};
+        --m-top-sm: {{ section.settings.m_top_sm | append: 'rem' }};
+        --m-bot-sm: {{ section.settings.m_bot_sm | append: 'rem' }};
+    }
+
+    .customer__page--container-{{ section.id }} {
+        margin-top: var(--m-top-lg);
+        margin-bottom: var(--m-bot-lg);
+    }
+
+    @media (max-width: 800px) { 
+        .customer__page--container-{{ section.id }} {
+            margin-top: var(--m-top-sm);
+            margin-bottom: var(--m-bot-sm);           
+        }
+    }
+{% endstyle %}
+
+<section class="customer__page--container page-width customer__page--container-{{ section.id }}">
+    <div class="page__image--wrapper lg-screens">
+        {% assign image = section.settings.page_image_login_lg %}
+        {% if image != blank %}
+            <img loading="lazy" 
+                srcset="
+              {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if image.width >= 535 -%}{{ image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if image.width >= 750 -%}{{ image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if image.width >= 1070 -%}{{ image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w"
+              src="{{ image | image_url: width: 1500 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ image.alt }}" 
+              width="{{ image.width }}" 
+              height="{{ image.height }}">
+        {% elsif image == blank %}
+            {{ 'image' | placeholder_svg_tag }}
+        {% endif %}
+    </div><!-- end of Page Image Wrapper -->
+    <div class="page__image--wrapper sm-screens">
+        {% assign image = section.settings.page_image_login_sm %}
+        {% if image != blank %}
+            <img loading="lazy" 
+                srcset="
+              {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if image.width >= 535 -%}{{ image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if image.width >= 750 -%}{{ image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if image.width >= 1070 -%}{{ image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w"
+              src="{{ image | image_url: width: 1500 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ image.alt }}" 
+              width="{{ image.width }}" 
+              height="{{ image.height }}">
+        {% elsif image == blank %}
+            {{ 'lifestyle-2' | placeholder_svg_tag }}
+        {% endif %}
+    </div><!-- end of Page Image Wrapper -->
+    <div class="page__fields--wrapper">
+        <div class="customer login">
+        <h1 id="create">
+            {{ 'customer.register.title' | t }}
+        </h1>
+        <div>
+            <p class="accounts-desc">{{ section.settings.desc_create }}</p>
+            {%- form 'create_customer', novalidate: 'novalidate' -%}
+            <div class="customer_register_error">
+                {%- if form.errors -%}
+                    <ul> 
+                    {%- for field in form.errors -%}
+                        <li>
+                        {%- if field == 'form' -%}
+                            {{ form.errors.messages[field] }}
+                        {%- else -%}
+                            <a href="#RegisterForm-{{ field }}">
+                            {{ form.errors.translated_fields[field] | capitalize }}
+                            {{ form.errors.messages[field] }}
+                            </a>
+                        {%- endif -%}
+                        </li>
+                    {%- endfor -%}
+                    </ul>
+                {%- endif -%}
+            </div>
+            <div class="field">  
+            <p data-type="first-name">{{ 'customer.register.first_name' | t }}</p>    
+                <input
+                type="text"
+                name="customer[first_name]"
+                id="RegisterForm-FirstName"
+                {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+                autocomplete="given-name"
+                placeholder="{{ 'customer.register.first_name' | t }}"
+                >
+            </div>
+            <div class="field">
+                <p data-type="last-name">{{ 'customer.register.last_name' | t }}</p>
+                <input
+                type="text"
+                name="customer[last_name]"
+                id="RegisterForm-LastName"
+                {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+                autocomplete="family-name"
+                placeholder="{{ 'customer.register.last_name' | t }}"
+                >
+            </div>
+            <div class="field">     
+                <p data-type="email">{{ 'customer.register.email' | t }}</p> 
+                <input
+                type="email"
+                name="customer[email]"
+                id="RegisterForm-email"
+                {% if form.email %} value="{{ form.email }}"{% endif %}
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="email"
+                aria-required="true"
+                {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="RegisterForm-email-error"
+                {% endif %}
+                placeholder="{{ 'customer.register.email' | t }}"
+                >
+            </div>
+            {%- if form.errors contains 'email' -%}
+                <span id="RegisterForm-email-error" class="form__message">
+                <svg aria-hidden="true" focusable="false" role="presentation">
+                    <use href="#icon-error" />
+                </svg>
+                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+                </span>
+            {%- endif -%}
+            <div class="field">
+            <p data-type="password">{{ 'customer.register.password' | t }}</p>      
+                <input
+                type="password"
+                name="customer[password]"
+                id="RegisterForm-password"
+                aria-required="true"
+                {% if form.errors contains 'password' %}
+                    aria-invalid="true"
+                    aria-describedby="RegisterForm-password-error"
+                {% endif %}
+                placeholder="{{ 'customer.register.password' | t }}"
+                >
+            </div>
+            {%- if form.errors contains 'password' -%}
+                <span id="RegisterForm-password-error" class="form__message">
+                <svg aria-hidden="true" focusable="false" role="presentation">
+                    <use href="#icon-error" />
+                </svg>
+                {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
+                </span>
+            {%- endif -%}
+            <button>
+                {{ 'customer.register.submit' | t }}
+            </button>
+
+            <div class="help-link">
+                {{ 'customer.login_page.login_back_q' | t }}
+                <a href="#cancel">
+                    {{ 'customer.login_page.cancel' | t }}
+                </a>
+            </div>
+
+            {% if section.settings.create_bottom_text %}
+                <div class="bottom-cnt-create">
+                    {{ section.settings.create_bottom_text }}
+                </div>
+            {% endif %}
+
+            {%- endform -%}
+        </div>
+        <h1 id="recover" tabindex="-1" class="accounts-sub-title">
+            {{ 'customer.recover_password.title' | t }}
+        </h1>
+        <div>
+            <p class="accounts-desc">{{ section.settings.desc_reset }}</p>
+            {%- form 'recover_customer_password' -%}
+            {% assign recover_success = form.posted_successfully? %}
+            <div class="field">
+                <p data-type="email">{{ 'customer.login_page.email' | t }}</p>
+                <input type="email"
+                value=""
+                name="email"
+                id="RecoverEmail"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                    aria-invalid="true"
+                    aria-describedby="RecoverEmail-email-error"
+                {% endif %}
+                placeholder="{{ 'customer.login_page.email' | t }}"
+                >
+            </div>
+            <div class="customer_forget_error">
+                {%- if form.errors -%}
+                    <small id="RecoverEmail-email-error" class="form__message">
+                    <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
+                        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                    </svg>
+                    {{ form.errors.messages['form'] }}
+                    </small>
+                {%- endif -%}
+            </div>
+
+            <button>
+                {{ 'customer.login_page.submit-recover' | t }}
+            </button>
+
+            <div class="help-link">
+                {{ 'customer.login_page.login_back_q' | t }}
+                <a href="#cancel">
+                    {{ 'customer.login_page.cancel' | t }}
+                </a>
+            </div>
+            {%- endform -%}
+        </div>
+
+        <h1 id="login" tabindex="-1" class="accounts-sub-title">
+            {{ 'customer.login_page.title' | t }}
+        </h1>
+        <div>
+            <p class="accounts-desc">{{ section.settings.desc_login }}</p>
+            <div class="recover_success">
+                {%- if recover_success == true -%}
+                <h3 class="form__message" tabindex="-1">
+                    <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
+                    <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
+                    <path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/>
+                    <path d="M4.10645 6.7688L6.13766 8.62553" stroke="white">
+                    </svg>
+                    {{ 'customer.recover_password.success' | t }}
+                </h3>
+                {%- endif -%}
+            </div>
+            {%- form 'customer_login' -%}
+            <input type="hidden" name="return_to" value="{{ shop.url }}">
+            <div class="customer_login_error">
+                {%- if form.errors -%}
+                    {{ form.errors | default_errors }}
+                {%- endif -%}
+            </div>
+
+
+            <div class="field">  
+            <p data-type="email">{{ 'customer.login_page.email' | t }}</p>   
+                <input
+                type="email"
+                name="customer[email]"
+                id="CustomerEmail"
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="off"
+                {% if form.errors contains 'form' %}
+                    aria-invalid="true"
+                {% endif %}
+                placeholder="{{ 'customer.login_page.email' | t }}"
+                >
+            </div>
+
+            {%- if form.password_needed -%}
+                <div class="field">
+                <p data-type="password">{{ 'customer.login_page.password' | t }}</p>        
+                <input
+                    type="password"
+                    value=""
+                    name="customer[password]"
+                    id="CustomerPassword"
+                    autocomplete="current-password"
+                    {% if form.errors contains 'form' %}
+                    aria-invalid="true"
+                    {% endif %}
+                    placeholder="{{ 'customer.login_page.password' | t }}"
+                >
+                </div>
+            {%- endif -%}
+
+            <button>
+                {{ 'customer.login_page.sign_in' | t }}
+            </button>
+
+            <div class="help-link">
+                {{ 'customer.login_page.create_q' | t }}
+                <a href="#create">
+                    {{ 'customer.login_page.create_account' | t }}
+                </a>
+            </div>
+            
+            <div class="help-link">
+                {{ 'customer.login_page.forget_q' | t }}
+                <a href="#recover">
+                    {{ 'customer.login_page.forgot_password' | t }}
+                </a>
+            </div>
+
+            {% if section.settings.bottom_title != '' %}
+                <div class="bottom-cnt">
+                    <div class="text-col-accounts">
+                        <h4>{{ section.settings.bottom_title }}</h4>
+                        <div>{{ section.settings.bottom_paragraph }}</div>
+                    </div>
+                    <div>
+                        <a href="{{ section.settings.bottom_btn_url }}">{{ section.settings.bottom_btn_text }}</a>
+                    </div>
+                </div>
+            {% endif %}
+            
+            {%- endform -%}
+        </div>
+        
+        {%- if shop.checkout.guest_login -%}
+            <div>
+            <hr>
+            <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+
+            {%- form 'guest_login' -%}
+                <button>
+                {{ 'customer.login_page.guest_continue' | t }}
+                </button>
+            {%- endform -%}
+            </div>
+        {%- endif -%}
+        </div>
+</div><!-- end of Page Fields Wrapper -->
+</section>
+
+{% schema %}
+{
+  "name": "Main Login",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "page_image_login_lg",
+      "label": "Insert Image",
+      "info": "large screen"
+    },
+    {
+      "type": "textarea",
+      "id": "desc_login",
+      "label": "Login page Description"
+    },
+    {
+        "type": "text",
+        "id": "bottom_title",
+        "label": "Bottom Title"
+    },
+    {
+        "type": "textarea",
+        "id": "bottom_paragraph",
+        "label": "Bottom Paragraph"
+    },
+    {
+        "type": "text",
+        "id": "bottom_btn_text",
+        "label": "Bottom Button Text"
+    },
+    {
+        "type": "url",
+        "id": "bottom_btn_url",
+        "label": "Bottom Button Url"
+    },
+    {
+      "type": "textarea",
+      "id": "desc_reset",
+      "label": "Reset password Description"
+    },
+    {
+      "type": "textarea",
+      "id": "desc_create",
+      "label": "Create account Description"
+    },
+    {
+      "type": "richtext",
+      "id": "create_bottom_text",
+      "label": "Create Bottom Description"
+    },
+    {
+      "type": "range",
+      "id": "m_top_lg",
+      "min": 0,
+      "max": 30,
+      "unit": "rem",
+      "label": "block top margin",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "m_bot_lg",
+      "min": 0,
+      "max": 30,
+      "unit": "rem",
+      "label": "block bottom margin",
+      "default": 5
+    },
+    {
+      "type": "image_picker",
+      "id": "page_image_login_sm",
+      "label": "Insert Image",
+      "info": "small screen"
+    },
+    {
+      "type": "range",
+      "id": "m_top_sm",
+      "min": 0,
+      "max": 12,
+      "unit": "rem",
+      "label": "block top margin",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "m_bot_sm",
+      "min": 0,
+      "max": 12,
+      "unit": "rem",
+      "label": "block bottom margin",
+      "default": 5
+    }
+  ]
+}
+{% endschema %}

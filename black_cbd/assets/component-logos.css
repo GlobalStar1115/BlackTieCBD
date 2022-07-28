@@ -1,0 +1,36 @@
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 1.5rem;
+  scrollbar-width: none;
+}
+.swipe_description--mobile {
+  display: none;
+}
+.swipe_description--mobile__icon {
+  margin-right: 1.5rem;
+}
+.swipe_description--mobile__caption {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #383838;
+}
+
+@media only screen and (max-width: 1000px) {
+  .logos {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .swipe_description--mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

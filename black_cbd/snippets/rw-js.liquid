@@ -1,0 +1,37 @@
+{% if template contains 'product' or template contains 'article' %}
+<!-- BEGIN: RatingWidget -->
+<div class="rw-js-container">
+    <script type="text/javascript">(function(d, t, e, m){
+        // Async Rating-Widget initialization.
+        window.RW_Async_Init = function(){
+            {% include 'rw-settings' %}
+            {% include 'rw-settings-custom' %}
+            
+            // Init ratings settings.
+            RW.init(settings);
+
+            // Adds rating identification for analytics.
+            {% if template contains 'article' %}
+                RW.initRating("{{ article.id }}", ratingSettings);
+            {% else %}
+                RW.initRating("{{ product.id }}", ratingSettings);
+            {% endif %}
+            
+            RW.render();
+        };
+
+        // Append Rating-Widget JavaScript library.
+        var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+            l = d.location, ck = "Y" + t.getFullYear() + 
+            "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+            f = (-1 < l.search.indexOf("DBG=") ? "" : ".min"),
+            a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+        if (d.getElementById(id)) return;              
+        rw = d.createElement(e);
+        rw.id = id; rw.async = true; rw.type = "text/javascript";
+        rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+        s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+</div>
+<!-- END: RatingWidget -->
+{% endif %}

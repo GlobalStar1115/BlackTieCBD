@@ -1,0 +1,110 @@
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-us__heading--desktop {
+  display: block;
+  font-family: Poppins;
+  font-size: 4.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2d2d2d;
+}
+
+.contact-us__heading--mobile {
+  display: none;
+  font-family: Poppins;
+  font-size: 3.4rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+.contact-us__content--subheading {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.contact-us__content--description {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2d2d2d;
+}
+
+.contact-us__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.contact-us__action--button {
+  padding: 1rem 2.1rem;
+  background-color: #5b7373;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  column-gap: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-us {
+    flex-direction: column;
+  }
+
+  .contact-us__heading--desktop {
+    display: none;
+  }
+
+  .contact-us__heading--mobile {
+    display: block;
+  }
+
+  .contact-us__content {
+    margin: 1.5rem 0 1.5rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .contact-us__content--subheading {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .contact-us__content--description {
+    text-align: center;
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#121212",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#334fb4",
+    "gradient_accent_2": "",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#ffffff",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "type_header_font": "poppins_n4",
+    "heading_scale": 100,
+    "type_body_font": "poppins_n4",
+    "body_scale": 100,
+    "page_width": 1400,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 20,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "top right",
+    "badge_corner_radius": 0,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_pinterest_link": "",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": false,
+    "cart_type": "page",
+    "show_cart_note": false,
+    "cart_drawer_collection": "thc-products",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text_left": "",
+              "text_center": "Award Winning High-Resin Hemp Flowers",
+              "text_right": "Support 1+ (888)702-2285",
+              "color_background": "#1a1a1a",
+              "text_color": "#ffffff",
+              "text_hover_color": "#044cc1",
+              "menu": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "d1645578-4246-4b89-acd4-26120b80d157": {
+            "type": "mega_menu",
+            "settings": {
+              "mega_menu_color_background": "#ffffff",
+              "mega_menu_text_color": "#000000",
+              "mega_menu_text_hover_color": "#044cc1",
+              "parent": "Smokables",
+              "sub_menu_bottom_link_text": "",
+              "sub_menu_bottom_link": "",
+              "menu": "smokables",
+              "product__1": "250-mg-boost-delta-9-thc-gummies-10-mg-each-sativa",
+              "title__1": "Our Recommendations",
+              "link__1": "",
+              "product__2": "",
+              "title__2": "",
+              "link__2": ""
+            }
+          },
+          "2b9fdb3e-a8c2-472e-923a-bcce14596720": {
+            "type": "mega_menu",
+            "settings": {
+              "mega_menu_color_background": "#ffffff",
+              "mega_menu_text_color": "#121212",
+              "mega_menu_text_hover_color": "#334fb4",
+              "parent": "CBD Edibles",
+              "sub_menu_bottom_link_text": "",
+              "sub_menu_bottom_link": "",
+              "menu": "shop-all-cbd-edibles",
+              "product__1": "",
+              "title__1": "",
+              "link__1": "",
+              "product__2": "",
+              "title__2": "",
+              "link__2": ""
+            }
+          },
+          "12f38ed8-6d7e-479d-973d-d2ba048d6d9f": {
+            "type": "mega_menu",
+            "settings": {
+              "mega_menu_color_background": "#ffffff",
+              "mega_menu_text_color": "#121212",
+              "mega_menu_text_hover_color": "#334fb4",
+              "parent": "Merch",
+              "sub_menu_bottom_link_text": "",
+              "sub_menu_bottom_link": "",
+              "menu": "shop-all-merch",
+              "product__1": "",
+              "title__1": "",
+              "link__1": "",
+              "product__2": "",
+              "title__2": "",
+              "link__2": ""
+            }
+          }
+        },
+        "block_order": [
+          "d1645578-4246-4b89-acd4-26120b80d157",
+          "2b9fdb3e-a8c2-472e-923a-bcce14596720",
+          "12f38ed8-6d7e-479d-973d-d2ba048d6d9f"
+        ],
+        "settings": {
+          "color_background": "#ffffff",
+          "text_color": "#000000",
+          "text_hover_color": "#044cc1",
+          "svg_logo": "",
+          "logo": "shopify:\/\/shop_images\/BT-logo-retina-rectangle-black_751d729c-3a9b-4a45-a972-6f6af1ad8ad5.png",
+          "logo_width": 240,
+          "logo_position": "top-center",
+          "menu": "main-menu-eag",
+          "menu_type_desktop": "mega",
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "margin_bottom": 0,
+          "mobile_menu": "main-menu",
+          "mobile_color_background": "#ffffff",
+          "mobile_text_color": "#121212",
+          "mobile_text_hover_color": "#334fb4",
+          "images_title": "",
+          "product__1": "",
+          "title__1": "",
+          "link__1": "",
+          "product__2": "",
+          "title__2": "",
+          "link__2": "",
+          "product__3": "",
+          "title__3": "",
+          "link__3": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "7659bd7e-0ded-4e1b-9c14-c035a7d83e55": {
+            "type": "text",
+            "settings": {
+              "heading": "CUSTOMER CARE",
+              "subtext": "<p>730 Kiley Avenue<br\/>Yuba City, CA 95991<\/p>",
+              "phone": "aaa",
+              "email": "aaa",
+              "subtext_2": "<p>Opening Hours:<br\/>Monday to Saturday: 9am - 8pm (PST)<br\/>Sundays: 10am - 6pm<\/p>",
+              "subtext_3": ""
+            }
+          },
+          "8af7c847-0999-47bc-92fc-9be3f53a687d": {
+            "type": "link_list",
+            "settings": {
+              "heading": "SMOKEABLES",
+              "menu": "smokeables",
+              "heading_1": "",
+              "menu_1": ""
+            }
+          },
+          "af969ddf-3a4a-4f8c-99d4-d688939477b5": {
+            "type": "link_list",
+            "settings": {
+              "heading": "EDIBLES",
+              "menu": "edibles",
+              "heading_1": "TOPICALS",
+              "menu_1": "topicals"
+            }
+          },
+          "fa70a9ac-5ccc-443e-b2cd-ce58b7c5a070": {
+            "type": "link_list",
+            "settings": {
+              "heading": "BLACK TIE MERCH",
+              "menu": "black-tie-merch",
+              "heading_1": "",
+              "menu_1": ""
+            }
+          },
+          "e35264c7-9729-47e6-bf92-a0f628c62b47": {
+            "type": "link_list",
+            "settings": {
+              "heading": "SUPPORT",
+              "menu": "support",
+              "heading_1": "",
+              "menu_1": ""
+            }
+          }
+        },
+        "block_order": [
+          "7659bd7e-0ded-4e1b-9c14-c035a7d83e55",
+          "8af7c847-0999-47bc-92fc-9be3f53a687d",
+          "af969ddf-3a4a-4f8c-99d4-d688939477b5",
+          "fa70a9ac-5ccc-443e-b2cd-ce58b7c5a070",
+          "e35264c7-9729-47e6-bf92-a0f628c62b47"
+        ],
+        "settings": {
+          "color_scheme": "accent-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Oh hey—Let’s be inbox friends",
+          "newsletter_p": "Sign up for offers & learn more about Black Tie CBD",
+          "show_social": true,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 0,
+          "disclaimer_heading": "FDA DISCLAIMER",
+          "disclaimer_content": "This product is not for use by or sale to persons under the age of 21. This product should be used only as directed on the label. It should not be used if you are pregnant or nursing. Consult with a physician before use if you have a serious medical condition or use prescription medications. A Doctor’s advice should be sought before using this and any supplemental dietary product. All trademarks and copyrights are property of their respective owners and are not affiliated with nor do they endorse this product. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual weight loss results will vary. By using this site, you agree to follow the Privacy Policy and all Terms & Conditions printed on this site. Void Where Prohibited by law."
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "main-cart-items": {
+        "type": "main-cart-items",
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-cart-footer": {
+        "type": "main-cart-footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "top right",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_background": "transparent",
+                "text_color": "transparent",
+                "text_hover_color": "transparent"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "color_background": "transparent",
+            "text_color": "transparent",
+            "text_hover_color": "transparent",
+            "logo_width": 90,
+            "logo_position": "middle-left",
+            "menu": "main-menu",
+            "show_line_separator": true,
+            "enable_sticky_header": true,
+            "margin_bottom": 0,
+            "mobile_color_background": "transparent",
+            "mobile_text_color": "transparent",
+            "mobile_text_hover_color": "transparent"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info",
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission",
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "color_scheme": "background-1",
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe to our emails",
+            "show_social": true,
+            "margin_top": 48,
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}

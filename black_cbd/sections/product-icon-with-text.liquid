@@ -1,0 +1,67 @@
+{{ 'section-icon-with-image.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .icon-with-image {
+    background-color: {{ section.settings.background_color }};
+  }
+{%- endstyle -%}
+
+<div class="icon-with-image product__icon-with-text s-mod-product__icon-with-text-collection">
+    {%- for block in section.blocks -%}
+      <div class="icon-with-image-content product__icon-with-image-content">
+        {{ block.settings.image | image_url: width: 40 | image_tag:
+          loading: 'lazy',
+          class: "icon-with-image-content__image"
+        }}
+        <div class="icon-with-image-content__caption">
+          {{ block.settings.caption | replace: 'p>', 'span>' }}
+        </div>
+      </div>
+    {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.icon-with-text.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#b3c8c6",
+      "label": "t:sections.icon-with-text.settings.background_color.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.icon-with-text.blocks.item.name",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "caption",
+          "default": "<p>Add caption</p>",
+          "label": "t:sections.icon-with-text.blocks.item.settings.caption.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.icon-with-text.blocks.item.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

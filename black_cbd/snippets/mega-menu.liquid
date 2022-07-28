@@ -1,0 +1,56 @@
+<div class="mega-menu_item">
+  {%- if isProduct -%}
+    <span class="mega-menu__sublist_cards_title">
+      {{ title }}
+    </span>
+  {%- else -%}
+    <a href="{{ link }}" class="mega-menu__sublist_cards_title">{{ title }}</a>
+  {%- endif -%}
+  <div class="mega-menu_item_inner">
+    {%- if isProduct -%}
+      {% if link != blank %}
+      <a href="{{ link }}" class="mega-menu_item__link">
+      {% endif %}
+      {% if link != blank %}
+      <div class="mega-menu_item__image media media--hover-effect" style="padding-bottom:  100%;">
+        {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+        <img
+        srcset="{%- if image.src.width >= 165 -%}{{ image.src | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if image.src.width >= 360 -%}{{ image.src | image_url: width: 360 }} 360w,{%- endif -%}
+          {%- if image.src.width >= 533 -%}{{ image.src | image_url: width: 533 }} 533w,{%- endif -%}
+          {%- if image.src.width >= 720 -%}{{ image.src | image_url: width: 720 }} 720w,{%- endif -%}
+          {%- if image.src.width >= 1000 -%}{{ image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+          {%- if image.src.width >= 1500 -%}{{ image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ image.src | image_url }} {{ image.src.width }}w"
+        src="{{ image.src | image_url: width: 533 }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="Image:{{ image.src.alt | escape }}"
+        class="motion-reduce"
+        {% unless lazy_load == false %}loading="lazy"{% endunless %}
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        >
+        {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+      </div> 
+      {% endif %}           
+
+      {% if link_title != blank %}
+        {{ link_title }} →
+      {% endif %}
+
+      {% if link != blank %}
+      </a>            
+      {% endif %}
+
+      {% if badge %}
+        <span class="mega-menu_item__badge">{{ badge }}</span>
+      {% endif %}
+    {%- else -%}
+      <div class="mega-menu_item_inner_links">
+        {% for link in links %}
+          <a href="{{ link.url }}" class="mega-menu_item__link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,158 @@
+{{ 'component-logos.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .logos-container {
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="logos-container page-width section-{{ section.id }}-padding section-{{ section.id }}-margin">
+  <div class="logos">
+    {%- for block in section.blocks -%}
+      {% case block.type %}
+      {% when "item" %}
+        <div class="logos__item">
+          {{ block.settings.image | image_url: width: 109 | image_tag:
+            loading: 'lazy',
+            class: "logos__image"
+          }}
+        </div>
+      {% endcase %}
+    {%- endfor -%}
+  </div>
+  {% if section.settings.show_mobile_swipe %}
+    <div class="swipe_description--mobile">
+      {% if section.settings.swipe_icon %}
+        {{ section.settings.swipe_icon | image_url: width: 20 | image_tag:
+          loading: 'lazy',
+          class: "swipe_description--mobile__icon"
+        }}
+      {% endif %}
+      <p class="swipe_description--mobile__caption">{{ section.settings.swipe_description }}</p>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.logos.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#b3c8c6",
+      "label": "t:sections.all.colors.background.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.logos.settings.swipe_notification.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_swipe",
+      "default": true,
+      "label": "t:sections.logos.settings.show_mobile_swipe.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "swipe_icon",
+      "label": "t:sections.logos.settings.swipe_icon.label"
+    },
+    {
+      "type": "text",
+      "id": "swipe_description",
+      "label": "t:sections.logos.settings.swipe_description.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.margin.section_margin_heading"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.logos.blocks.item.name",
+      "limit": 9,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.logos.blocks.item.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

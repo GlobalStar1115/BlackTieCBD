@@ -1,0 +1,61 @@
+{{ 'component-minicart.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<mini-cart class="minicart">
+  <div class="minicart__wrapper">
+    <div class="minicart__main">
+      {% section 'main-cart-items' %}
+      {% section 'main-cart-footer' %}
+    </div>
+    <div class="minicart__collection s-mod-minicart__collection">
+      <div class="heading page-width">Best sellers</div>
+      <div class="splide splide-mini-cart page-width">
+        <div class="splide__track collection">
+
+          <ul id="product-grid" data-id="{{ section.id }}" class="splide__list">
+              <li class="splide__slide s-mod-product__slpide__slide s-mod-minicart__product--splide__slide">
+                {%- for product in collections['cart'].products -%}
+                {% render 'card-product',
+                  card_product: product,
+                  show_quick_add: false,
+                  hide_rating: true,
+                  show_price: true
+                %}
+                {% assign modulo = forloop.index | modulo: 3 %}
+                {% if modulo == 0 and forloop.last == false %}
+                  </li>
+                  <li class="splide__slide s-mod-product__slpide__slide s-mod-minicart__product--splide__slide">
+                {% endif %}
+                {%- endfor -%}
+              </li>
+          </ul>
+
+          {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</mini-cart>
+<div id="minicart-bg" class="minicart-bg js-minicart-close"></div>
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    new Splide('.splide-mini-cart', {
+      perPage: 1,
+      arrows: false
+    }).mount();
+    {% comment %} const rating_count = document.querySelectorAll('.s-mod-minicart__product--splide__slide .oke-sr-count-number');
+    var counter = (function(){
+      var string = '';
+
+      for(var i = 0; i < rating_count.length; i++){
+          string += rating_count[i].innerText;
+      }
+      console.log(string);
+      return string;
+    }()); {% endcomment %}
+  });
+</script>

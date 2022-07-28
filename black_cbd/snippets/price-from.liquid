@@ -1,0 +1,17 @@
+{%- liquid
+  assign price = product.price | default: 1999
+  assign money_price = price | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+
+-%}
+<div class="price price--from medium-hide large-up-hide">
+  <div class="price__container">
+    <div class="price__regular">
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      <span class="price__label">from</span>
+      <span class="price-item price-item--regular">{{ money_price }}</span>
+    </div>
+  </div>
+</div>

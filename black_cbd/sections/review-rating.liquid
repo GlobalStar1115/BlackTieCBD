@@ -1,0 +1,210 @@
+{{ 'component-review-rating.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .review-rating {
+    background-color: {{ section.settings.background_color }};
+  }
+  .review-rating .icon-radingstart-rating {
+    width: {{ section.settings.rate | times: 20 }}%;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="review-rating page-width section-{{ section.id }}-padding section-{{ section.id }}-margin">
+  {%- for block in section.blocks -%}
+    {% case block.type %}
+    {%- when "stars" -%}
+      <div class="review-rating__stars">
+        {%- style -%}
+          :root {
+          }
+          
+          .stars-{{ block.id }} {
+            --star-size: 30px;
+            --star-color: {{ block.settings.star_color }};
+            --percent: calc({{ section.settings.rate }}/5 * 100%);
+            display: inline-block !important;
+            font-size: var(--star-size);
+            font-family: Times;
+            line-height: 1;
+          }
+          .stars-{{ block.id }}::before {
+              content: '★★★★★';
+              letter-spacing: 3px;
+              background: linear-gradient(90deg, var(--star-color) var(--percent), transparent var(--percent));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              -webkit-text-stroke: 1px {{ block.settings.star_color }};
+          }
+          {%- endstyle -%}
+          <div class="stars-{{ block.id }}" style="--rating: {{ section.settings.rate }};" aria-label="Rating of this product is {{ block.settings.review_score }} out of 5."></div>
+      </div>
+    {%- when "heading" -%}
+      <div class="review-rating__heading product__review-rating__heading">
+        {{ block.settings.text }}
+      </div>
+    {%- when "caption" -%}
+      <div class="review-rating__caption product__review-rating__caption">
+        {{ block.settings.text }}
+      </div>
+    {% endcase %}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.review-rating.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#b3c8c6",
+      "label": "t:sections.review-rating.settings.background_color.label"
+    },
+    {
+      "type": "range",
+      "id": "rate",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "unit": "⭐",
+      "label": "t:sections.review-rating.settings.rate.label",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.margin.section_margin_heading"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.margin.margin_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stars",
+      "name": "t:sections.review-rating.blocks.stars.name",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "color",
+          "id": "star_color",
+          "default": "#00ffff",
+          "label": "t:sections.review-rating.blocks.stars.settings.star_color.label"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.review-rating.blocks.heading.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.review-rating.blocks.heading.text"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "default": "#00ffff",
+          "label": "t:sections.review-rating.blocks.heading.settings.heading_color.label"
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "t:sections.review-rating.blocks.caption.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.review-rating.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "color",
+          "id": "caption_color",
+          "default": "#00ffff",
+          "label": "t:sections.review-rating.blocks.caption.settings.caption_color.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name",
+      "blocks": [
+        {
+          "type": "stars"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "caption"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

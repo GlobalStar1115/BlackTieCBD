@@ -1,0 +1,816 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>1st place <br\/>BEST CBD VAPE<\/p>",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Hemp plant is a variety of the Cannabis Sativa plant. Hemp is grown for fiber, seed oil, or different extracts used in food and industry",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SUBSCRIBE & SAVE",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/High-Resin_Hemp_BlackTieCBD.Net_fa7842c6-1d93-4813-937f-392c6420b6b5.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "icon_with_text": {
+      "type": "icon-with-text",
+      "blocks": {
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Fast Free Shipping<br\/>On Every Product<\/p>"
+          }
+        },
+        "a74ea197-7663-4554-b779-f9ec56fffb3e": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Risk Free 30 Day<br\/>Money Back<\/p>"
+          }
+        },
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>100% Natural<br\/>Ingredients<\/p>"
+          }
+        },
+        "77d15db8-b77f-447a-97b1-ae408ced972a": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Lab Tested<br\/>For Accuracy<\/p>"
+          }
+        },
+        "9074d79d-b0b9-4492-b582-d33b02585eda": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Derived From Legal<br\/>Complaint Hemp<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9",
+        "a74ea197-7663-4554-b779-f9ec56fffb3e",
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8",
+        "77d15db8-b77f-447a-97b1-ae408ced972a",
+        "9074d79d-b0b9-4492-b582-d33b02585eda"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All your favorites<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1655747784959fb18c": {
+      "type": "collection-list",
+      "blocks": {
+        "165574778475340ea3-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-smokeables"
+          }
+        },
+        "165574778475340ea3-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "edibles"
+          }
+        },
+        "165574778475340ea3-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-tinctures"
+          }
+        },
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "thc-products"
+          }
+        }
+      },
+      "block_order": [
+        "165574778475340ea3-0",
+        "165574778475340ea3-1",
+        "165574778475340ea3-2",
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a"
+      ],
+      "settings": {
+        "classname": "home-favourite",
+        "image_size": 100,
+        "image_border_radius": 0,
+        "horizontal_spacing": 0,
+        "vertical_spacing": 5,
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_source": "color-scheme",
+        "color_scheme": "background-1",
+        "background_color": "#fafafa",
+        "show_view_all": false,
+        "show_shop_all": true,
+        "columns_mobile": "2",
+        "mobile_layout": "horizontal",
+        "swipe_on_mobile": false,
+        "caption_on_desktop": true,
+        "caption_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 36,
+        "has_collection_bg": false,
+        "card_bg_mobile": "#ffffff",
+        "card_bg_desktop": "rgba(0,0,0,0)"
+      }
+    },
+    "review_rating": {
+      "type": "review-rating",
+      "blocks": {
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e": {
+          "type": "stars",
+          "settings": {
+            "star_color": "#e7a600"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "3,756 reviews and counting!",
+            "heading_color": "#00ffff"
+          }
+        },
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01": {
+          "type": "caption",
+          "settings": {
+            "text": "FREE SHIPPING On orders over $100, arrives in 2 - 7 days.",
+            "caption_color": "#00ffff"
+          }
+        }
+      },
+      "block_order": [
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e",
+        "heading",
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01"
+      ],
+      "settings": {
+        "background_color": "#708c8c",
+        "rate": 3.4,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 60,
+        "margin_bottom": 0
+      }
+    },
+    "1656683046d01debe3": {
+      "type": "multicolumn",
+      "blocks": {
+        "1656683046a7dd7986-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1656683046a7dd7986-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1656683046a7dd7986-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "008116b5-0b05-4cd5-8c3e-5b06fe4adb59": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "905e0910-cfb6-44e6-bcfc-846d39a35b1d": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "fa2a9f23-3405-4986-9a4a-0ffbe0959032": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "41db4fc8-cdc2-4ae7-a198-d086a9b920fc": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c0a8c9c8-54cd-4351-8b83-f46d6e6606d1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "50ab75d1-b2ea-41bd-a463-35eb290b85d7": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656683046a7dd7986-0",
+        "1656683046a7dd7986-1",
+        "1656683046a7dd7986-2",
+        "008116b5-0b05-4cd5-8c3e-5b06fe4adb59",
+        "905e0910-cfb6-44e6-bcfc-846d39a35b1d",
+        "fa2a9f23-3405-4986-9a4a-0ffbe0959032",
+        "41db4fc8-cdc2-4ae7-a198-d086a9b920fc",
+        "c0a8c9c8-54cd-4351-8b83-f46d6e6606d1",
+        "50ab75d1-b2ea-41bd-a463-35eb290b85d7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third-four",
+        "image_ratio": "adapt",
+        "columns_desktop": 9,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "16588849995514e445": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "165584472012191694": {
+      "type": "rich-text",
+      "blocks": {
+        "1655844720dcc66118-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Popular picks<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1655844720dcc66118-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1655844720dcc66118-0",
+        "1655844720dcc66118-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "classname": "homepage",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "is_slider_mode": false,
+        "collection": "cbd-hemp-flowers",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "border_on_mobile": false,
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "16560190344b631706": {
+      "type": "collection-list",
+      "blocks": {
+        "16560190347f607753-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-tablets"
+          }
+        },
+        "16560190347f607753-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-coffee"
+          }
+        },
+        "16560190347f607753-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bath-bombs"
+          }
+        },
+        "1d7d7bd5-3172-4b25-8cd8-ccd5d9f9a33f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brand-merchandise"
+          }
+        }
+      },
+      "block_order": [
+        "16560190347f607753-0",
+        "16560190347f607753-1",
+        "16560190347f607753-2",
+        "1d7d7bd5-3172-4b25-8cd8-ccd5d9f9a33f"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image_size": 30,
+        "image_border_radius": 20,
+        "horizontal_spacing": 5,
+        "vertical_spacing": 0,
+        "title": "Find your relief",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_source": "color-picker",
+        "color_scheme": "background-1",
+        "background_color": "#d9e4e3",
+        "show_view_all": false,
+        "show_shop_all": true,
+        "columns_mobile": "1",
+        "mobile_layout": "horizontal",
+        "swipe_on_mobile": false,
+        "caption_on_desktop": true,
+        "caption_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 72,
+        "has_collection_bg": true,
+        "card_bg_mobile": "rgba(0,0,0,0)",
+        "card_bg_desktop": "#ffffff"
+      }
+    },
+    "1656017608eb55cdaf": {
+      "type": "image-with-text",
+      "blocks": {
+        "1656017608931d4bf7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Never run out",
+            "heading_size": "h1"
+          }
+        },
+        "1656017608931d4bf7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our subscription, shop your favorite CBD products show up at your door automatically and save up to 25%.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1656017608931d4bf7-2": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/np_income_2321866_000000_3x_f9542e09-9377-40b4-b34f-39b4f1efe091.png",
+            "text": "Up to 25% Off"
+          }
+        },
+        "894aae2c-27fa-4414-a551-4c3c08c93e2a": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/np_swap_1259590_000000_3x_18e0f376-ab12-4a01-b1ac-259c7b6b36f6.png",
+            "text": "Swap Flavors Anytime"
+          }
+        },
+        "a9d0f685-d5ee-42ca-aefc-4896ab782b81": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/np_yes_2794078_000000_3x_966aea26-3d57-4e10-9b72-8d9b8af9b781.png",
+            "text": "Cancel Anytime"
+          }
+        },
+        "1656017608931d4bf7-3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656017608931d4bf7-0",
+        "1656017608931d4bf7-1",
+        "1656017608931d4bf7-2",
+        "894aae2c-27fa-4414-a551-4c3c08c93e2a",
+        "a9d0f685-d5ee-42ca-aefc-4896ab782b81",
+        "1656017608931d4bf7-3"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image": "shopify:\/\/shop_images\/LS_6-min_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "rgba(0,0,0,0)",
+        "mobile_content_alignment": "left",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "16564411709f642eee": {
+      "type": "info-image-slider",
+      "blocks": {
+        "e1080b5f-18ca-461e-b6ae-fbcc807d99af": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pdpimg_b2946ca5-e294-4e19-a0da-cdb18f56c580.png",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "d0dad577-c7d2-4b86-aaf6-7fd281e37618": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BR_5.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "231ed804-3da0-47dc-b424-5cffd95222ab": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cbd-vs-thc-the-key-differences.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "27552238-477c-4f60-96e8-07b2084d6f40": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LS_6-min_1.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "8c25b8a5-dabf-4f53-bc84-f5014db9266c": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/is-cbd-coffee-good-for-your-health.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "28d5ffae-913a-44a2-8745-3eacd791494a": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how-to-enjoy-cannabis-without-smoking-it-1.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e1080b5f-18ca-461e-b6ae-fbcc807d99af",
+        "d0dad577-c7d2-4b86-aaf6-7fd281e37618",
+        "231ed804-3da0-47dc-b424-5cffd95222ab",
+        "27552238-477c-4f60-96e8-07b2084d6f40",
+        "8c25b8a5-dabf-4f53-bc84-f5014db9266c",
+        "28d5ffae-913a-44a2-8745-3eacd791494a"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "heading": "What makes us different",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "height": "adapt",
+        "add_image_padding": false,
+        "layout": "full_width",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "ptop_mob": 40,
+        "pbottom_mob": 40,
+        "sectionbg": "#b3c8c6"
+      }
+    },
+    "1656015911e4b329e7": {
+      "type": "image-with-text",
+      "blocks": {
+        "165601591196c71d12-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium CBD Hemp flower",
+            "heading_size": "h1"
+          }
+        },
+        "165601591196c71d12-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With over 40 years of growing experience between them, the owners of Black Tie CBD know a thing or two about cannabis. Black Tie hemp is organically grown right in Oregon. We farm 5 different properties combining over nearly 200 acres to bring America the highest quality High-Resin Hemp Flowers available.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "165601591196c71d12-3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165601591196c71d12-0",
+        "165601591196c71d12-1",
+        "165601591196c71d12-3"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image": "shopify:\/\/shop_images\/pdpimg.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "#fafafa",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 96
+      }
+    },
+    "1656358995b479dc0c": {
+      "type": "featured-blog",
+      "settings": {
+        "classname": "homepage",
+        "heading": "Black Tie CBD different",
+        "heading_alignment": "center",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 2,
+        "columns_desktop": 2,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_read_more": true,
+        "show_view_all": false,
+        "padding_top": 64,
+        "padding_bottom": 96
+      }
+    },
+    "1656089938cadc5019": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16560899380a0de027-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "This seems to good to be true, is buying hemp online legal?",
+            "icon": "none",
+            "row_content": "<p>Thanks to the passing of the Farm Bill in 2018, interstate commerce of hemp was legalized. Now you can absolutely legally buy and enjoy products from Black Tie CBD store. Remember, Black Tie hemp dispensary may only sell cannabis to adult customers.<\/p>",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m new to cannabis. Can I get advice on buying cannabis from a cannabis store?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that I am purchasing reliable cbd products?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a doctor’s prescription to buy cbd from blacktiecbd.Net?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Help me delay my next shipment!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "db4fc97e-8228-4a28-a766-20198ea042f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see your question above?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "2b50a75b-2820-4344-91e3-ece90bd419ba": {
+          "type": "footer",
+          "settings": {
+            "is_link": false,
+            "text": "More questions?",
+            "link": ""
+          }
+        },
+        "1421d7b2-592c-427f-9db8-d62282582357": {
+          "type": "footer",
+          "settings": {
+            "is_link": true,
+            "text": "View Our FAQs Page",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16560899380a0de027-0",
+        "16560899380a0de027-1",
+        "16560899380a0de027-2",
+        "16560899380a0de027-3",
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9",
+        "db4fc97e-8228-4a28-a766-20198ea042f1",
+        "2b50a75b-2820-4344-91e3-ece90bd419ba",
+        "1421d7b2-592c-427f-9db8-d62282582357"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "homepage",
+        "heading": "frequently asked question",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "icon_with_text",
+    "rich_text",
+    "1655747784959fb18c",
+    "review_rating",
+    "1656683046d01debe3",
+    "16588849995514e445",
+    "165584472012191694",
+    "featured_collection",
+    "16560190344b631706",
+    "1656017608eb55cdaf",
+    "16564411709f642eee",
+    "1656015911e4b329e7",
+    "1656358995b479dc0c",
+    "1656089938cadc5019"
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "sections": {
+    "1657632512ae08a5d2": {
+      "type": "image-banner",
+      "blocks": {
+        "1657632511dd27a43a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ collection.title }}<\/p>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "1657632511dd27a43a-0"
+      ],
+      "settings": {
+        "image": "{{ collection.image }}",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "165763272029a3de74": {
+      "type": "icon-with-text",
+      "blocks": {
+        "16576327204d4fb257-0": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Fast Free Shipping<br\/>On Every Product<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "56faf08f-6dc6-4277-aa95-9059f83ca61b": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Risk Free 30 Day<br\/>Money Back<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "1a5a3d47-b28d-4ffc-b133-49f80276aa37": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>100% Natural<br\/>Ingredients<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "1b8baf5b-63f7-4953-97c3-e2d820940d3a": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Lab Tested<br\/>For Accuracy<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "3711c191-3f00-4f87-9fa8-8b66fb72e510": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Derived From Legal<br\/>Complaint Hemp<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "16576327204d4fb257-0",
+        "56faf08f-6dc6-4277-aa95-9059f83ca61b",
+        "1a5a3d47-b28d-4ffc-b133-49f80276aa37",
+        "1b8baf5b-63f7-4953-97c3-e2d820940d3a",
+        "3711c191-3f00-4f87-9fa8-8b66fb72e510"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "c26a5687-1181-4275-83d1-21f0ceb41e1e": {
+          "type": "mood",
+          "settings": {
+            "title": "Shop Stress",
+            "tag": "stress"
+          }
+        },
+        "f8c84f86-aa56-495f-bdfc-2bac7956ca6f": {
+          "type": "mood",
+          "settings": {
+            "title": "Shop Recovery",
+            "tag": "recovery"
+          }
+        },
+        "c531231a-c03b-4748-8c05-5034b51d192d": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Hemp Flower",
+            "collections": [
+              "delta-8-flower",
+              "cbd-hemp-flowers",
+              "cbg-hemp-flowers",
+              "cbd-pre-rolls"
+            ]
+          }
+        },
+        "325143cd-0ce4-48f7-af79-751c5dd1c776": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Concentrates",
+            "collections": [
+              "cbd-tablets",
+              "cbd-hemp-flowers",
+              "cbg-concentrates",
+              "concentrates"
+            ]
+          }
+        },
+        "5f0cd592-5c9b-4b9b-bef6-2868e8619f6d": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Vape Cartridges",
+            "collections": [
+
+            ]
+          }
+        },
+        "5ab00fb5-a463-4a71-8a12-79a5c7864dab": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Gummies",
+            "collections": [
+              "thc-delta-8-gummies-syrups",
+              "thc-delta-9-gummies-syrups"
+            ]
+          }
+        },
+        "2a9d20ee-d728-424a-9dd7-5b4a4b215283": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Tinctures",
+            "collections": [
+              "tinctures",
+              "cbd-tinctures",
+              "cbg-tinctures",
+              "thc-delta-8-tinctures",
+              "thc-delta-9-tinctures"
+            ]
+          }
+        },
+        "9e01f1b4-6d8f-45f3-93ef-810642a2c490": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Syrups",
+            "collections": [
+
+            ]
+          }
+        },
+        "af0195c7-79f5-4bff-96e9-40e076580960": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Hard Candies",
+            "collections": [
+
+            ]
+          }
+        },
+        "0b3f2855-a0b8-423d-b721-d2c36ec98398": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Other Edibles",
+            "collections": [
+              "edibles"
+            ]
+          }
+        },
+        "a8925d64-752a-40b5-9b24-2b28532ae92b": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Apparel",
+            "collections": [
+
+            ]
+          }
+        },
+        "7f3d806a-e02a-4e52-80c9-1c0a9aa0d0bf": {
+          "type": "filter-group",
+          "settings": {
+            "title": "Shop Accessories",
+            "collections": [
+
+            ]
+          }
+        },
+        "b1691e7a-6b68-4d62-9f77-e5479aacb8b8": {
+          "type": "mood",
+          "settings": {
+            "title": "Shop Mood",
+            "tag": "mood"
+          }
+        },
+        "d41a4f2b-10da-43a2-98ac-21f75a31cc73": {
+          "type": "mood",
+          "settings": {
+            "title": "Shop Focus",
+            "tag": "focus"
+          }
+        },
+        "cf93e462-1a0e-4311-b899-79093c3385b8": {
+          "type": "mood",
+          "settings": {
+            "title": "Shop Sleep",
+            "tag": "sleep"
+          }
+        }
+      },
+      "block_order": [
+        "c26a5687-1181-4275-83d1-21f0ceb41e1e",
+        "f8c84f86-aa56-495f-bdfc-2bac7956ca6f",
+        "c531231a-c03b-4748-8c05-5034b51d192d",
+        "325143cd-0ce4-48f7-af79-751c5dd1c776",
+        "5f0cd592-5c9b-4b9b-bef6-2868e8619f6d",
+        "5ab00fb5-a463-4a71-8a12-79a5c7864dab",
+        "2a9d20ee-d728-424a-9dd7-5b4a4b215283",
+        "9e01f1b4-6d8f-45f3-93ef-810642a2c490",
+        "af0195c7-79f5-4bff-96e9-40e076580960",
+        "0b3f2855-a0b8-423d-b721-d2c36ec98398",
+        "a8925d64-752a-40b5-9b24-2b28532ae92b",
+        "7f3d806a-e02a-4e52-80c9-1c0a9aa0d0bf",
+        "b1691e7a-6b68-4d62-9f77-e5479aacb8b8",
+        "d41a4f2b-10da-43a2-98ac-21f75a31cc73",
+        "cf93e462-1a0e-4311-b899-79093c3385b8"
+      ],
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "review_rating": {
+      "type": "review-rating",
+      "blocks": {
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e": {
+          "type": "stars",
+          "settings": {
+            "star_color": "#e7a600"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "3,756 reviews and counting!",
+            "heading_color": "#00ffff"
+          }
+        },
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01": {
+          "type": "caption",
+          "settings": {
+            "text": "FREE SHIPPING On orders over $100, arrives in 2 - 7 days.",
+            "caption_color": "#00ffff"
+          }
+        }
+      },
+      "block_order": [
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e",
+        "heading",
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6",
+        "rate": 3.4,
+        "padding_top": 40,
+        "padding_bottom": 56,
+        "margin_top": 40,
+        "margin_bottom": 0
+      }
+    },
+    "16583947579a38805c": {
+      "type": "multicolumn",
+      "blocks": {
+        "e0799dd5-f658-4861-a0f1-cea3c3db77e2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "b7a9ec59-7911-4283-909c-d01f266d2d06": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "67eec707-4b4d-43ce-a37b-0df68b29b2d8": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "5b1be61b-f363-449b-ab35-2f1db4fa570c": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "224564a1-1ce0-4f3e-84a0-ca1bb90f3b2c": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "7f3583fc-0d7b-4241-bebd-af9a04891d4d": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "5861fec6-e296-47aa-8aab-ea8c62f9366f": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d19530fb-f9b1-4ed1-8d9e-dfaeaa8220c4": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c6b39ff5-ff0b-4266-801e-30925cbd3aff": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e0799dd5-f658-4861-a0f1-cea3c3db77e2",
+        "b7a9ec59-7911-4283-909c-d01f266d2d06",
+        "67eec707-4b4d-43ce-a37b-0df68b29b2d8",
+        "5b1be61b-f363-449b-ab35-2f1db4fa570c",
+        "224564a1-1ce0-4f3e-84a0-ca1bb90f3b2c",
+        "7f3583fc-0d7b-4241-bebd-af9a04891d4d",
+        "5861fec6-e296-47aa-8aab-ea8c62f9366f",
+        "d19530fb-f9b1-4ed1-8d9e-dfaeaa8220c4",
+        "c6b39ff5-ff0b-4266-801e-30925cbd3aff"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third-four",
+        "image_ratio": "adapt",
+        "columns_desktop": 9,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "165888822481ec01cc": {
+      "type": "apps",
+      "blocks": {
+        "0d3d0a81-2d1d-4e6b-aa54-ccf0ef5fe961": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "0d3d0a81-2d1d-4e6b-aa54-ccf0ef5fe961"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16577202855a0478fd": {
+      "type": "collapsible-content",
+      "blocks": {
+        "1657720285a02b76ae-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "This seems to good to be true, is buying hemp online legal?",
+            "icon": "none",
+            "row_content": "<p>Thanks to the passing of the Farm Bill in 2018, interstate commerce of hemp was legalized. Now you can absolutely legally buy and enjoy products from Black Tie CBD store. Remember, Black Tie hemp dispensary may only sell cannabis to adult customers.<\/p>",
+            "page": ""
+          }
+        },
+        "1657720285a02b76ae-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m new to cannabis. Can I get advice on buying cannabis from a cannabis store?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "1657720285a02b76ae-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that I am purchasing reliable cbd products?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "1657720285a02b76ae-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a doctor’s prescription to buy cbd from blacktiecbd.Net?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "27dc2bf2-5bcb-4b1c-9b18-996df9b77f4d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Help me delay my next shipment!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "d5b247d1-a392-4104-b9d9-92134684000d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see your question above?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "5e0a5cad-76b7-48d5-9e66-19f95900da38": {
+          "type": "footer",
+          "settings": {
+            "is_link": false,
+            "text": "More Questions?",
+            "link": ""
+          }
+        },
+        "ca0c1890-3bcb-4239-9f5b-97c85e0aed6a": {
+          "type": "footer",
+          "settings": {
+            "is_link": true,
+            "text": "View Our FAQs Page",
+            "link": "\/pages\/faq"
+          }
+        }
+      },
+      "block_order": [
+        "1657720285a02b76ae-0",
+        "1657720285a02b76ae-1",
+        "1657720285a02b76ae-2",
+        "1657720285a02b76ae-3",
+        "27dc2bf2-5bcb-4b1c-9b18-996df9b77f4d",
+        "d5b247d1-a392-4104-b9d9-92134684000d",
+        "5e0a5cad-76b7-48d5-9e66-19f95900da38",
+        "ca0c1890-3bcb-4239-9f5b-97c85e0aed6a"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "homepage",
+        "heading": "Frequently asked question",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 64,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1657632512ae08a5d2",
+    "165763272029a3de74",
+    "banner",
+    "product-grid",
+    "review_rating",
+    "16583947579a38805c",
+    "165888822481ec01cc",
+    "16577202855a0478fd"
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1656691138b3f3d93c": {
+      "type": "image-banner",
+      "blocks": {
+        "1656691138a6a9aa3d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>FAQ<\/p>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "1656691138a6a9aa3d-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HNwLXol15D1DIVQJqiXcIiDnwheFGmVc1616523671.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "icon_with_text": {
+      "type": "icon-with-text",
+      "blocks": {
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Fast Free Shipping<br\/>On Every Product<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "a74ea197-7663-4554-b779-f9ec56fffb3e": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Risk Free 30 Day<br\/>Money Back<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>100% Natural<br\/>Ingredients<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "77d15db8-b77f-447a-97b1-ae408ced972a": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Lab Tested<br\/>For Accuracy<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "9074d79d-b0b9-4492-b582-d33b02585eda": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Derived From Legal<br\/>Complaint Hemp<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9",
+        "a74ea197-7663-4554-b779-f9ec56fffb3e",
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8",
+        "77d15db8-b77f-447a-97b1-ae408ced972a",
+        "9074d79d-b0b9-4492-b582-d33b02585eda"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6"
+      }
+    },
+    "16571427746f7dec0d": {
+      "type": "nested-collapsible-content",
+      "blocks": {
+        "4b58ece8-1b75-4cc6-b1fb-7fe89390441a": {
+          "type": "collapsible_category",
+          "settings": {
+            "id": "general_questions",
+            "heading": "General Questions",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16571427747a003b75-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "How to use CBD oil?",
+            "icon": "none",
+            "row_content": "<p>Cannabidiol (CBD) is a non-intoxicating cannabis compound that has significant medical benefits but does not make people feel “stoned”<\/p>",
+            "page": ""
+          }
+        },
+        "16571427747a003b75-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "What are the benefits of CBD?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16571427747a003b75-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "Will it show up on a drug test?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16571427747a003b75-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "Does CBD oil get you high?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "8458e1e1-f403-4fb2-bb03-c740ceb58e4d": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "What does “Full Spectrum” mean?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "31b99561-620d-4516-a6ca-b69f1baa5cb2": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "What does “Broad Spectrum” mean?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "b7e12b75-93f7-491a-bdf8-179d5dc8c8e8": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "general_questions",
+            "heading": "What is CBD Isolate?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "4bacb3a1-8e1c-4a29-a622-5d52252782ea": {
+          "type": "collapsible_category",
+          "settings": {
+            "id": "shipping_refunds",
+            "heading": "Shipping and Refunds",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "0009c5cb-49b5-460c-830d-d6d010935dcd": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "shipping_refunds",
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "096c06cd-dc1e-4548-88b9-cd248fa69dde": {
+          "type": "collapsible_category",
+          "settings": {
+            "id": "wholesale",
+            "heading": "Wholesale",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "bac8d587-e19e-4206-a011-21b714ac7c58": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "wholesale",
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "01efb32d-34cd-412f-89c4-427de505fa76": {
+          "type": "collapsible_category",
+          "settings": {
+            "id": "subscription",
+            "heading": "Subscription",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "b4c921f0-ddc9-4ce3-bde7-564cdd93b576": {
+          "type": "collapsible_row",
+          "settings": {
+            "category_id": "subscription",
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "4b58ece8-1b75-4cc6-b1fb-7fe89390441a",
+        "16571427747a003b75-0",
+        "16571427747a003b75-1",
+        "16571427747a003b75-2",
+        "16571427747a003b75-3",
+        "8458e1e1-f403-4fb2-bb03-c740ceb58e4d",
+        "31b99561-620d-4516-a6ca-b69f1baa5cb2",
+        "b7e12b75-93f7-491a-bdf8-179d5dc8c8e8",
+        "4bacb3a1-8e1c-4a29-a622-5d52252782ea",
+        "0009c5cb-49b5-460c-830d-d6d010935dcd",
+        "096c06cd-dc1e-4548-88b9-cd248fa69dde",
+        "bac8d587-e19e-4206-a011-21b714ac7c58",
+        "01efb32d-34cd-412f-89c4-427de505fa76",
+        "b4c921f0-ddc9-4ce3-bde7-564cdd93b576"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "homepage",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 64
+      }
+    },
+    "1656978315126315d5": {
+      "type": "contact-us",
+      "settings": {
+        "classname": "about-us",
+        "heading_desktop": "Want to talk?",
+        "heading_mobile": "Want to",
+        "subheading": "Hours of Operation",
+        "description": "We’re here 10am - 6:30pm EST every day",
+        "call_us": "CALL US",
+        "phone_no": "+1 (888)702-2285",
+        "chat_with_us": "CHAT WITH US",
+        "color_scheme": "background-2",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All your favorites<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "1655747784959fb18c": {
+      "type": "collection-list",
+      "blocks": {
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-smokeables"
+          }
+        },
+        "165574778475340ea3-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "edibles"
+          }
+        },
+        "165574778475340ea3-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-tinctures"
+          }
+        },
+        "165574778475340ea3-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "thc-products"
+          }
+        }
+      },
+      "block_order": [
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a",
+        "165574778475340ea3-0",
+        "165574778475340ea3-1",
+        "165574778475340ea3-2"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image_size": 100,
+        "image_border_radius": 0,
+        "horizontal_spacing": 5,
+        "vertical_spacing": 5,
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_source": "color-scheme",
+        "color_scheme": "background-1",
+        "background_color": "#f8f6f4",
+        "show_view_all": false,
+        "show_shop_all": true,
+        "columns_mobile": "2",
+        "mobile_layout": "vertical",
+        "swipe_on_mobile": false,
+        "caption_on_desktop": true,
+        "caption_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "has_collection_bg": false,
+        "card_bg_mobile": "#ffffff",
+        "card_bg_desktop": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1656691138b3f3d93c",
+    "icon_with_text",
+    "16571427746f7dec0d",
+    "1656978315126315d5",
+    "rich_text",
+    "1655747784959fb18c"
+  ]
+}

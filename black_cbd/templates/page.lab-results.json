@@ -1,0 +1,264 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1656691138b3f3d93c": {
+      "type": "image-banner",
+      "blocks": {
+        "1656691138a6a9aa3d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Lab Results<\/p>",
+            "heading_size": "h0"
+          }
+        },
+        "90fa7626-c8fa-48b9-8731-c9529853dd40": {
+          "type": "search",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1656691138a6a9aa3d-0",
+        "90fa7626-c8fa-48b9-8731-c9529853dd40"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HNwLXol15D1DIVQJqiXcIiDnwheFGmVc1616523671.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "16576595477a848ca2": {
+      "type": "lab-results",
+      "settings": {
+        "caption": "",
+        "classname": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All your favorites<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "1655747784959fb18c": {
+      "type": "collection-list",
+      "blocks": {
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "edibles"
+          }
+        },
+        "165574778475340ea3-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-vape-catridges"
+          }
+        },
+        "165574778475340ea3-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbg-vape-cartridges"
+          }
+        },
+        "165574778475340ea3-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-coffee"
+          }
+        }
+      },
+      "block_order": [
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a",
+        "165574778475340ea3-0",
+        "165574778475340ea3-1",
+        "165574778475340ea3-2"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image_size": 100,
+        "image_border_radius": 0,
+        "horizontal_spacing": 5,
+        "vertical_spacing": 5,
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_source": "color-scheme",
+        "color_scheme": "background-1",
+        "background_color": "#f8f6f4",
+        "show_view_all": false,
+        "show_shop_all": true,
+        "columns_mobile": "2",
+        "mobile_layout": "horizontal",
+        "swipe_on_mobile": false,
+        "caption_on_desktop": true,
+        "caption_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "has_collection_bg": false,
+        "card_bg_mobile": "#ffffff",
+        "card_bg_desktop": "rgba(0,0,0,0)"
+      }
+    },
+    "1656089938cadc5019": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16560899380a0de027-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "This seems to good to be true, is buying hemp online legal?",
+            "icon": "none",
+            "row_content": "<p>Thanks to the passing of the Farm Bill in 2018, interstate commerce of hemp was legalized. Now you can absolutely legally buy and enjoy products from Black Tie CBD store. Remember, Black Tie hemp dispensary may only sell cannabis to adult customers.<\/p>",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m new to cannabis. Can I get advice on buying cannabis from a cannabis store?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that I am purchasing reliable cbd products?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a doctor’s prescription to buy cbd from blacktiecbd.Net?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Help me delay my next shipment!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "db4fc97e-8228-4a28-a766-20198ea042f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see your question above?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "2b50a75b-2820-4344-91e3-ece90bd419ba": {
+          "type": "footer",
+          "settings": {
+            "is_link": false,
+            "text": "More questions?",
+            "link": ""
+          }
+        },
+        "1421d7b2-592c-427f-9db8-d62282582357": {
+          "type": "footer",
+          "settings": {
+            "is_link": true,
+            "text": "View Our FAQs Page",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16560899380a0de027-0",
+        "16560899380a0de027-1",
+        "16560899380a0de027-2",
+        "16560899380a0de027-3",
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9",
+        "db4fc97e-8228-4a28-a766-20198ea042f1",
+        "2b50a75b-2820-4344-91e3-ece90bd419ba",
+        "1421d7b2-592c-427f-9db8-d62282582357"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "homepage",
+        "heading": "frequently asked question",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1656691138b3f3d93c",
+    "16576595477a848ca2",
+    "rich_text",
+    "1655747784959fb18c",
+    "1656089938cadc5019"
+  ]
+}

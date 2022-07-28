@@ -1,0 +1,211 @@
+.recharge-custom-widget {
+    margin-top: 1.5rem;
+}
+
+.widget_title {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.19;
+    color: #253746;
+    font-weight: bold;
+}
+
+.recharge-custom-container {
+    margin: 7px 0 1.5rem;
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.recharge-custom-container .select .icon-caret, .recharge-custom-container .customer select + svg {
+    height: 1rem;
+}
+
+.recharge-custom-container .recharge-radio + label {
+    border: solid 1px #c5d1d3;
+    padding: 1rem;
+    padding-left: 5rem;
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    line-height: 1.5;
+    min-height: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recharge-custom-container .recharge-radio:checked + label {
+    border-color: #1a1a1a;
+}
+
+.recharge-radio + label .save-text {
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #465959;
+    vertical-align: middle;
+}
+
+.recharge-radio + label::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: solid 1px #c5d1d3;
+    border-radius: 50px;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.recharge-radio:checked + label::before {
+    background-color: #1a1a1a;
+}
+
+.recharge-price {
+    font-size: 16px;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.compare-price{
+    font-size: 16px;
+    color: #707070;
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-right: 2px;
+}
+
+.recharge-onetime, .recharge-sub {
+    flex: 0 0 calc( 50% - 0.5rem);
+}
+
+.recharge-onetime {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.select-selling_plans {
+    width: 100%;
+}
+
+#sub-type {
+    font-size: 1.4rem;
+}
+
+.sub-radio-cnt {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.sub-radio-cnt .select__select{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--gradient-base-accent-1);
+    position: relative;
+    height: 4rem;
+}
+
+#sub-type input[type=radio] + label{
+    flex-grow: 1;
+    padding: 5px 15px;
+    border-radius: 7px;
+    border: solid 1px #8f979e;
+    background-color: #fafafa;
+    font-size: 16px;
+    font-weight: 400;
+    color: #263745;
+}
+
+#sub-type input[type=radio]:checked + label{
+    border: solid 1px #263745;
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #253746;
+}
+
+.recharge-dec-ul {
+    font-size: 1.2rem;
+}
+
+.recharge-dec-ul span {
+    margin-right: 5px;
+    color: #555555;
+}
+
+.recharge-dec-ul span::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin: 2px 5px 7px 0;
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: #555555;
+    border-radius: 10rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .recharge-onetime, .recharge-sub {
+        flex: 0 0 100%;
+    }
+
+    .recharge-custom-container .recharge-radio + label {
+        min-height: auto;
+    }
+
+    .recharge-custom-container .recharge-radio + label {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 749px) {
+
+    .recharge-radio + label {
+        font-size: 1.6rem;
+    }
+
+    .recharge-custom-container {
+        padding: 1.4rem 0;
+    }
+
+    .recharge-radio + label {
+        padding-left: 3rem;
+        position: relative;
+        display: block;
+        font-size: 1.9rem;
+        color: #263745;
+        font-size: 1.7rem;
+    }
+
+    #sub-type input[type=radio] + label{
+        padding: 5px;
+    }
+
+    .recharge-price.large-up-hide .no-js-hidden {
+        display: inline-block;
+    }
+
+    .recharge-price.large-up-hide .compare-price {
+        display: none;
+    }
+
+    .large-up-hide .recharge-dec-ul {
+        padding: 0.3rem 0;
+        text-align: left;
+    }
+
+    .recharge-radio + label::before {
+        top: 1.4rem;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,357 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.description.details | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Subscription Policy",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.description.subscription_policy | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.description.shipping_returns | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "caption",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "collapsible-row-0",
+        "collapsible-row-2",
+        "collapsible-row-1"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail",
+        "media_size": "small",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "product_icon_with_text": {
+      "type": "product-icon-with-text",
+      "blocks": {
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Fast Free Shipping<br\/>On Every Product<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "a74ea197-7663-4554-b779-f9ec56fffb3e": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Risk Free 30 Day<br\/>Money Back<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>100% Natural<br\/>Ingredients<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "77d15db8-b77f-447a-97b1-ae408ced972a": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Lab Tested<br\/>For Accuracy<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        },
+        "9074d79d-b0b9-4492-b582-d33b02585eda": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Derived From Legal<br\/>Complaint Hemp<\/p>",
+            "image": "shopify:\/\/shop_images\/image_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9",
+        "a74ea197-7663-4554-b779-f9ec56fffb3e",
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8",
+        "77d15db8-b77f-447a-97b1-ae408ced972a",
+        "9074d79d-b0b9-4492-b582-d33b02585eda"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6"
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium CBD Hemp flower",
+            "heading_size": "h0"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With over 40 years of growing experience between them, the owners of Black Tie CBD know a thing or two about cannabis. Black Tie hemp is organically grown right in Oregon. We farm 5 different properties combining over nearly 200 acres to bring America the highest quality High-Resin Hemp Flowers available.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "78f508f8-bac3-40c5-86ce-37dd3e225dea": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1",
+        "78f508f8-bac3-40c5-86ce-37dd3e225dea"
+      ],
+      "settings": {
+        "classname": "",
+        "image": "shopify:\/\/shop_images\/pdpimg_b2946ca5-e294-4e19-a0da-cdb18f56c580.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "rgba(0,0,0,0)",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "16557554871504e1ee": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16557554878f2ea453-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "This seems to good to be true, is buying hemp online legal?",
+            "icon": "none",
+            "row_content": "<p>Thanks to the passing of the Farm Bill in 2018, interstate commerce of hemp was legalized. Now you can absolutely legally buy and enjoy products from Black Tie CBD store. Remember, Black Tie hemp dispensary may only sell cannabis to adult customers.<\/p>",
+            "page": ""
+          }
+        },
+        "16557554878f2ea453-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m new to cannabis. Can I get advice on buying cannabis from a cannabis store?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16557554878f2ea453-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that I am purchasing reliable cbd products?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16557554878f2ea453-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a doctor’s prescription to buy cbd from blacktiecbd.Net?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "e3db3e3e-5c94-43e3-bce8-6355efa3f20e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Help me delay my next shipment!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "148ba760-050b-4a3c-b8e5-68a0fbc70a98": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see your question above?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "5b7dc114-34f0-4208-91cb-9997a03164f6": {
+          "type": "footer",
+          "settings": {
+            "is_link": false,
+            "text": "More Questions?",
+            "link": ""
+          }
+        },
+        "d3bfb0ec-dcad-4c15-b6d6-7ad6a606928a": {
+          "type": "footer",
+          "settings": {
+            "is_link": true,
+            "text": "View Our FAQs Page",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16557554878f2ea453-0",
+        "16557554878f2ea453-1",
+        "16557554878f2ea453-2",
+        "16557554878f2ea453-3",
+        "e3db3e3e-5c94-43e3-bce8-6355efa3f20e",
+        "148ba760-050b-4a3c-b8e5-68a0fbc70a98",
+        "5b7dc114-34f0-4208-91cb-9997a03164f6",
+        "d3bfb0ec-dcad-4c15-b6d6-7ad6a606928a"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "",
+        "heading": "Frequently asked question",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "product_star_rating": {
+      "type": "product-star-rating",
+      "settings": {
+        "background_color": "#faf7f5",
+        "padding_top": 252,
+        "padding_bottom": 252,
+        "margin_top": 52,
+        "margin_bottom": 52
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Popular Picks",
+        "heading_size": "h1",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1655756803d56dbee7": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Popular picks",
+        "classname": "",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "description": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "is_slider_mode": true,
+        "collection": "indoor-hemp-flower",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "border_on_mobile": false,
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_icon_with_text",
+    "image-with-text",
+    "16557554871504e1ee",
+    "product_star_rating",
+    "product-recommendations",
+    "1655756803d56dbee7"
+  ]
+}

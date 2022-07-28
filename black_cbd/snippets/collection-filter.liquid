@@ -1,0 +1,162 @@
+<aside aria-labelledby="verticalTitle" class="facets-wrapper" id="main-collection-filters" data-id="{{ section.id }}">
+  <div class="collection__top small-hide">
+    <h2 class="collection__heading">Filter by</h2>
+  </div>
+  <div class="filter-header medium-hide large-up-hide">
+    <h2 class="collection__heading">Filter by</h2>
+    <button class="close-filter js-close-filter">{% render 'icon-close-small' %}</button>
+  </div>
+  <div class="facet-block">
+    {% assign tags = request.path | replace: 'collections', '' | replace: collection.handle, '' %}
+    <details id="Details-{{ forloop.index }}-{{ section.id }}" class="facets__disclosure-vertical" open>
+      <summary class="facets__summary caption-large focus-offset" aria-label="{{ block.settings.title }}">
+        <div class="facet-block__title">
+          <span>Moods</span>
+          {% render 'icon-caret' %}
+        </div>
+      </summary>
+      <div class="parent-display facets__display-vertical" id="Facet-{{ forloop.index }}-{{ section.id }}">
+        <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
+          <legend class="visually-hidden">{{ block.settings.title }}</legend>
+          <ul class="list-unstyled no-js-hidden" role="list">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'mood' -%}
+                <li class="list-menu__item facets__item">
+                  <label class="facet-checkbox" for="Filter-{{ block.settings.tag | escape }}-{{ forloop.index }}">
+                    <input type="checkbox" class="js-filter-tag" name="filter-radio" value="{{ block.settings.tag }}"
+                      id="Filter-{{ block.settings.tag | escape }}-{{ forloop.index }}" {% if tags contains block.settings.tag %}checked{% endif %}>
+                    <svg class="icon-rectangle" aria-hidden="true" focusable="false" height="1.6rem" viewbox="0 0 16 16" width="1.6rem">
+                      <rect fill="none" height="16" stroke-width="1" stroke="currentColor" width="16"></rect>
+                    </svg>
+                    <svg class="icon icon-checkmark" fill="none" height="0.7rem" viewbox="0 0 11 7" width="1.1rem"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                        stroke="currentColor" />
+                    </svg>
+                    <span aria-hidden="true">{{ block.settings.title | escape }}</span>
+                  </label>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </fieldset>
+      </div>
+    </details>
+  </div>
+
+  <div class="facet-block">
+    <div class="facet-block__title small-hide">Products</div>
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'filter-group' -%}
+        {%- assign handles = block.settings.collections | map: 'handle' -%}
+        <details id="Details-{{ forloop.index }}-{{ section.id }}" class="facets__disclosure-vertical" {% if handles contains collection.handle %} open {% endif %}>
+          <summary class="facets__summary caption-large focus-offset" aria-label="{{ block.settings.title }}">
+            <div>
+              <span>{{ block.settings.title }}</span>
+              {% render 'icon-caret' %}
+            </div>
+          </summary>
+          <div class="parent-display facets__display-vertical" id="Facet-{{ forloop.index }}-{{ section.id }}">
+            <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
+              <legend class="visually-hidden">{{ block.settings.title }}</legend>
+              <ul class="list-unstyled no-js-hidden" role="list">
+                {%- for _collection in block.settings.collections -%}
+                  <li class="list-menu__item facets__item">
+                    <label class="facet-checkbox" for="Filter-{{ _collection.handle | escape }}-{{ forloop.index }}">
+                      <input type="checkbox" 
+                        class="js-filter-handle"
+                        name="filter-radio" 
+                        value="{{ _collection.handle }}" 
+                        id="Filter-{{ _collection.handle | escape }}-{{ forloop.index }}" 
+                        {% if _collection.handle == collection.handle %} checked {% endif %} 
+                      >
+                      <svg class="icon-rectangle" aria-hidden="true" focusable="false" height="1.6rem" viewbox="0 0 16 16" width="1.6rem">
+                        <rect fill="none" height="16" stroke-width="1" stroke="currentColor" width="16"></rect>
+                      </svg>
+                      <svg class="icon icon-checkmark" fill="none" height="0.7rem" viewbox="0 0 11 7" width="1.1rem" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" stroke="currentColor"/>
+                      </svg>
+                      <span aria-hidden="true">{{ _collection.title | escape }}</span>
+                    </label>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </fieldset>
+          </div>
+        </details>
+      {%- endif -%}
+    {%- endfor -%}
+
+  </div>
+</aside>
+<div class="filter-bg js-close-filter"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tagSelect = document.querySelectorAll('.js-filter-tag');
+    var handleSelect = document.querySelectorAll('.js-filter-handle');
+    var currentHandle = "{{ collection.handle }}";
+
+    function getTags() {
+      var tags = "";
+      tagSelect.forEach(function (select) {
+        if (select.checked) {
+          if (tags.length) tags += '+';
+          tags += select.value;
+        }
+      })
+      return tags
+    }
+
+    function getSorting() {
+      return document.getElementById('SortBy')?.value;
+    }
+
+    function applyFilters(handle = currentHandle) {
+      window.location.href = '/collections/' + handle + '/' + getTags() + '?sort_by=' + getSorting();
+    }
+
+    handleSelect.forEach(function (select) {
+      select.addEventListener('change', function (e) {
+        handleSelect.forEach(function (select) {
+          select.checked = false;
+        })
+        select.checked = true;
+        applyFilters(select.value);
+      })
+    })
+    tagSelect.forEach(function (select) {
+      select.addEventListener('click', function () {
+        applyFilters();
+      })
+    })
+    document.getElementById('SortBy')?.addEventListener('change', function () {
+      applyFilters();
+    })
+
+    document.querySelector('.js-open-filter')?.addEventListener('click', function (e) {
+      document.querySelector('body').classList.add('filter-opened')
+    })
+    document.querySelectorAll('.js-close-filter').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        document.querySelector('body').classList.remove('filter-opened')
+      })
+    })
+
+    function init() {
+      if (window.innerWidth < 750) {
+        document.querySelectorAll('.facets__disclosure-vertical').forEach(function (item) {
+          item.removeAttribute('open')
+        })
+        document.querySelectorAll('#SortBy option').forEach(function (item) {
+          item.innerText = item.innerText.replace('Sort by: ', '');
+        })
+      }
+    }
+    init();
+    window.onresize = init;
+
+  }, false);
+
+
+</script>

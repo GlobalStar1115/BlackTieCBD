@@ -1,0 +1,56 @@
+<!-- BEGIN: Rating-Widget -->
+{% include 'rw-ratings-data' %}
+
+{% if hasRatingData == true %}
+    {% if template contains 'article' %}
+        {% comment %} Retrieve the current protocol being used (http or https) since Google's Structured Data Testing Tool will report an error if the image URL doesn't start with http or https. {% endcomment %}
+        {% capture protocol %}{{ current_object.image | img_url: 'large' | truncate: 5, '' }}{% endcapture %}
+
+        {% if protocol !='https' and protocol != 'http:' %}
+            {% capture protocol %}{{ shop.url | truncate: 5, '' }}{% endcapture %}
+        {% endif %}
+
+        {% if protocol !='https' %}
+    	    {% assign protocol = 'http' %}
+        {% endif %}
+
+        {% comment %} The headline, image, and datePublished properties are required when using the Article markup. {% endcomment %}
+        <meta itemprop="headline" content="{{ current_object.title | escape | strip_html }}" />
+        
+        {% comment %} If the article doesn't have a featured image, Shopify will return a 'no image' image. {% endcomment %}
+        <meta itemprop="image" content="{{ protocol }}:{{ current_object.image | img_url: 'medium' }}" />
+        
+        <meta itemprop="datePublished" content="{{ current_object.created_at }}" />
+        
+        {% comment %} The following properties are optional. {% endcomment %}
+        <meta itemprop="name" content="{{ current_object.title | escape | strip_html }}" />
+        <meta itemprop="description" content="{{ article.excerpt | escape | strip_html }}" />
+        <meta itemprop="url" content="{{ shop.url }}{{ current_object.url }}" />
+    {% endif %}
+
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    {% endif %}
+
+        {% if template contains 'article' %}
+            {% assign rw_class = 'blog-post' %}
+        {% else %}
+            {% assign rw_class = 'product' %}
+        {% endif %}
+        
+        <div
+            class="rw-ui-container rw-urid-{{ current_object.id }} rw-class-{{ rw_class }}"
+            data-domain="{{ shop.permanent_domain | escape }}"
+            data-urid="{{ current_object.id }}"
+            data-title="{{ current_object.title | escape | strip_html }}"
+            data-description="{{ current_object.description | escape | strip_html }}"
+            data-url="{{ page.url }}"
+            data-img="{{ current_object.featured_image | product_img_url: 'large'  |replace: '?', '%3F' | replace: '&','%26'}}"
+            data-tags="{% for tag in current_object.tags %}{{ tag | escape }};{% endfor %}">
+        </div>
+
+        {% if hasRatingData == true %}
+        <meta itemprop="ratingValue" content="{{ rate }}" />
+        <meta itemprop="ratingCount" content="{{ votes }}" />
+    </div>
+    {% endif %}
+<!-- END: Rating-Widget -->

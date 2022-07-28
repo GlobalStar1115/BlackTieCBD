@@ -1,0 +1,112 @@
+{{ 'component-recharge.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+    assign variant_selected = product.selected_or_first_available_variant
+    assign alloc1 = variant_selected.selling_plan_allocations[0]
+    assign percent = alloc1.compare_at_price | minus: alloc1.per_delivery_price | times: 100 | divided_by: alloc1.compare_at_price -%}
+
+
+<div class="recharge-custom-widget">
+    <div class="widget_title">Choose your plan:</div>
+    <div class="recharge-custom-container">
+        {% for selling_plan_group in product.selling_plan_groups %}
+        <div class="recharge-onetime">
+            <input type="radio" name="selling_plan_{{ selling_plan_group.id }}"
+                id="selling_plan_{{ selling_plan_group.id }}-onetime" checked class="hidden recharge-radio"
+                value="onetime">
+            <label for="selling_plan_{{ selling_plan_group.id }}-onetime">
+                <div class="label-cov">
+                    <span id="onetime-price" class="recharge-price large-up-hide">
+                        <div class="no-js-hidden" id="price-{{ section.id }}" js-id="price-{{ section.id }}"
+                            role="status" {{ block.shopify_attributes }}>
+                            {%- render 'price', product: product, use_variant: true -%}
+                        </div> |
+                    </span>
+                    One-time order
+                    <span id="onetime-price" class="recharge-price medium-hide small-hide">
+                        <div class="no-js-hidden" id="price-{{ section.id }}" js-id="price-{{ section.id }}"
+                            role="status" {{ block.shopify_attributes }}>
+                            {%- render 'price', product: product, use_variant: true -%}
+                        </div>
+                    </span>
+                </div>
+            </label>
+        </div>
+        <div class="recharge-sub">
+            <input type="radio" name="selling_plan_{{ selling_plan_group.id }}"
+                id="selling_plan_{{ selling_plan_group.id }}-sub" class="hidden recharge-radio" value="subsave">
+            <label for="selling_plan_{{ selling_plan_group.id }}-sub">
+                <div class="label-cov">
+                    <span id="subscribe-price" class="recharge-price large-up-hide" js-id="sub-price-{{ section.id }}" >
+                      {% unless alloc1.compare_at_price == null %}
+                        <span class="compare-price">{{ alloc1.compare_at_price | money }}</span>
+                      {% endunless %}
+                      <span class="main-price">{{ alloc1.price | money }}</span> |
+                    </span>
+                    Subscribe & <span class="save-text">Save {{ percent }}%</span>
+                    <span id="subscribe-price" class="recharge-price medium-hide small-hide" js-id="sub-price-{{ section.id }}" >
+                      {% unless alloc1.compare_at_price == null %}
+                        <span class="compare-price">{{ alloc1.compare_at_price | money }}</span>
+                      {% endunless %}
+                      <span class="main-price">{{ alloc1.price | money }}</span>
+                    </span>
+                    <div id="sub-type-mobile" class="large-up-hide select-selling_plans">
+                        <div class="sub-radio-cnt">
+                            <div class="select">
+                                <select class="select__select" id="selling_plan_mobile">
+                                    {% for selling_plan in selling_plan_group.selling_plans %}
+                                    <option value="{{ selling_plan.id }}" {% if forloop.first == true %}
+                                        selected{% endif %}>
+                                        Ships every
+                                        {% if selling_plan.options[0].value contains '1' %}
+                                        {{ selling_plan.options[0].value | replace: 'Month(s)', ' Month' }}
+                                        {% else %}
+                                        {{ selling_plan.options[0].value | replace: 'Month(s)', ' Months' }}
+                                        {% endif %}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                                {% render 'icon-caret' %}
+                            </div>
+                            <div class="recharge-dec-ul">
+                                <span>FreeShipping</span>
+                                <span>Cancel anytime</span>
+                                <span>Refills Sent Automatically</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="select-selling_plans medium-hide small-hide">
+            <div class="label-cov">
+                <div id="sub-type">
+                    <div class="sub-radio-cnt">
+                        <div class="select">
+                            <select class="select__select" name="selling_plan" id="selling_plan">
+                                {% for selling_plan in selling_plan_group.selling_plans %}
+                                <option value="{{ selling_plan.id }}" {% if forloop.first == true %}
+                                    selected{% endif %}>
+                                    Ships every
+                                    {% if selling_plan.options[0].value contains '1' %}
+                                    {{ selling_plan.options[0].value | replace: 'Month(s)', ' Month' }}
+                                    {% else %}
+                                    {{ selling_plan.options[0].value | replace: 'Month(s)', ' Months' }}
+                                    {% endif %}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            {% render 'icon-caret' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recharge-dec-ul">
+                <span>FreeShipping</span>
+                <span>Cancel anytime</span>
+                <span>Refills Sent Automatically</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

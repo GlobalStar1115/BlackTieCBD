@@ -1,0 +1,50 @@
+.review-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+
+.review-rating__stars {
+  position: relative;
+  text-align: center;
+}
+
+.review-rating__heading {
+  font-family: Poppins;
+  font-size: 4.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.review-rating__caption {
+  font-family: Poppins;
+  font-size: 2.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 749px) {
+  .review-rating__heading {
+    font-family: Roboto;
+    font-size: 3.4rem;
+    font-weight: 500;
+    line-height: 1.18;
+  }
+  .review-rating__caption {
+    font-family: Roboto;
+    font-size: 1.9rem;
+    line-height: 1.26;
+  }
+}

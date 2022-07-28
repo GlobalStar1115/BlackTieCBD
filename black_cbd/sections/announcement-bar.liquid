@@ -1,0 +1,197 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      {%- style -%}
+        #AnnouncementBar-{{ section.id }} {
+          background: {{ block.settings.color_background }};
+          color: {{ block.settings.text_color }};
+        }
+
+        #AnnouncementBar-{{ section.id }} p,
+        #AnnouncementBar-{{ section.id }} .list-menu__item,
+        #AnnouncementBar-{{ section.id }}  .announcement-bar__inline-menu li a {
+          color: {{ block.settings.text_color }};
+          text-decoration: none;
+        }
+
+        #AnnouncementBar-{{ section.id }} .announcement-bar__link:hover .announcement-bar__message,
+        #AnnouncementBar-{{ section.id }} .list-menu__item:hover,
+        #AnnouncementBar-{{ section.id }}  .announcement-bar__inline-menu li a:hover {
+          color: {{ block.settings.text_hover_color }};
+          text-decoration: none;
+        }
+      {%- endstyle -%}
+      <div id="AnnouncementBar-{{ section.id }}" class="announcement-bar__wrap">
+        <div
+          class="announcement-bar page-width"
+          role="region"
+          aria-label="{{ 'sections.header.announcement' | t }}"
+          {{ block.shopify_attributes }}
+        >
+          <p class="announcement-bar__message left h4">
+            {{ block.settings.text_left | escape }}
+          </p>
+          <p class="announcement-bar__message center h4">
+            {{ block.settings.text_center | escape }}
+          </p>
+          <p class="announcement-bar__message right h4">
+            {{ block.settings.text_right | escape }}
+          </p>
+
+          {%- if block.settings.menu != blank -%}
+            <nav class="announcement-bar__inline-menu" aria-label="announcement-bar__inline-menu">
+              <ul class="list-menu list-menu--inline" role="list">
+                {%- for link in block.settings.menu.links -%}
+                  <li>
+                    {%- if link.links != blank -%}
+                      <details-disclosure>
+                        <details id="Details-Announcement-Bar-Menu-{{ forloop.index }}">
+                          <summary class="announcement-bar__menu-item list-menu__item link focus-inset">
+                            <span
+                              {%- if link.child_active %}
+                                class="announcement-bar__active-menu-item"
+                              {% endif %}
+                            >
+                              {{- link.title | escape -}}
+                            </span>
+                            {% render 'icon-caret' %}
+                          </summary>
+                          <ul
+                            id="Announcement-Bar-Menu-MenuList-{{ forloop.index }}"
+                            class="announcement-bar__submenu list-menu list-menu--disclosure caption-large motion-reduce"
+                            role="list"
+                            tabindex="-1"
+                          >
+                            {%- for childlink in link.links -%}
+                              <li>
+                                {%- if childlink.links == blank -%}
+                                  <a
+                                    href="{{ childlink.url }}"
+                                    class="announcement-bar__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                                    {% if childlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ childlink.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <details id="Details-Announcement-Bar-SubMenu-{{ forloop.index }}">
+                                    <summary class="announcement-bar__menu-item link link--text list-menu__item focus-inset caption-large">
+                                      {{ childlink.title | escape }}
+                                      {% render 'icon-caret' %}
+                                    </summary>
+                                    <ul
+                                      id="Announcement-Bar-Menu-SubMenuList-{{ forloop.index }}"
+                                      class="announcement-bar__submenu list-menu motion-reduce"
+                                    >
+                                      {%- for grandchildlink in childlink.links -%}
+                                        <li>
+                                          <a
+                                            href="{{ grandchildlink.url }}"
+                                            class="announcement-bar__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
+                                            {% if grandchildlink.current %}
+                                              aria-current="page"
+                                            {% endif %}
+                                          >
+                                            {{ grandchildlink.title | escape }}
+                                          </a>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  </details>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </details>
+                      </details-disclosure>
+                    {%- else -%}
+                      <a
+                        href="{{ link.url }}"
+                        class="announcement-bar__menu-item announcement-bar__menu-item list-menu__item link link--text focus-inset"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        <span
+                          {%- if link.current %}
+                            class="announcement-bar__active-menu-item"
+                          {% endif %}
+                        >
+                          {{- link.title | escape -}}
+                        </span>
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+        </div>
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_left",
+          "default": "Welcome to our store",
+          "label": "Left Text"
+        },
+        {
+          "type": "text",
+          "id": "text_center",
+          "default": "Welcome to our store",
+          "label": "Center Text"
+        },
+        {
+          "type": "text",
+          "id": "text_right",
+          "default": "Welcome to our store",
+          "label": "Right Text"
+        },
+        {
+          "type": "color",
+          "id": "color_background",
+          "default": "transparent",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.color_background.label"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "default": "transparent",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_color.label"
+        },
+        {
+          "type": "color",
+          "id": "text_hover_color",
+          "default": "transparent",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_hover_color.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "main-menu",
+          "label": "t:sections.header.settings.menu.label"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

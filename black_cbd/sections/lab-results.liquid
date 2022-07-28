@@ -1,0 +1,357 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+{{ 'section-lab-results.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'list.min.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient s-mod-lab-results-content">
+  <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
+    <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
+      <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow product__collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
+        <div class="collapsible-content__header" style="text-align: {{ section.settings.heading_alignment }};">
+          {%- if section.settings.caption != blank -%}
+            <p class="caption-with-letter-spacing"> {{ section.settings.caption | escape }}</p>
+          {% endif %}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="collapsible-content__heading product__collapsible-content__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+          {%- else -%}
+            <h2 class="visually-hidden">{{ 'accessibility.lab-results_title' | t }}</h2>
+          {% endif %}
+        </div>
+        <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}">
+          {%- if section.settings.image != blank -%}
+            <div class="grid__item collapsible-content__grid-item">
+              <div class="collapsible-content__media collapsible-content__media--{{ section.settings.image_ratio }} media global-media-settings gradient"
+                {% if section.settings.image_ratio == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
+              >
+                <img
+                  srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1250 -%}{{ section.settings.image | image_url: width: 1250 }} 1250w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                  src="{{ section.settings.image | image_url: width: 1500 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ section.settings.image.alt | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.image.width }}"
+                  height="{{ section.settings.image.height }}"
+                >
+              </div>
+            </div>
+          {% endif %}
+          <div class="grid__item lab_report" id="lab_report">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    let results = {};
+    let ids = [];
+    let id = null;
+    let type = null;
+    let data = null;
+    {%- for collection in collections -%}
+      {%- for product in collection.products -%}
+        {%- if product.metafields.features.lab_report %}
+          id = '{{ product.id }}';
+          if (ids.indexOf(id) === -1) {
+            ids.push(id);
+            type = '{{ product.type | escape }}';
+            data = {
+              id,
+              title: '{{ product.title | escape }}',
+              lab_report: '{{ product.metafields.features.lab_report }}'
+            };
+            if (!results[type]) {
+              results[type] = [data];
+            } else {
+              results[type].push(data);
+            }
+          }
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+
+    Object.keys(results).forEach(key => {
+      const block_id = key.toLowerCase().replace(/\W/g, '_');
+      document.querySelector('#lab_report').innerHTML +=
+        `
+          <div class="accordion">
+            <details id="Details-${block_id}-{{ section.id }}"{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}>
+              <summary id="Summary-${block_id}-{{ section.id }}" class="collapsible_category-title">
+                <h3 class="accordion__title product__accordion__title h4">
+                  ${key}
+                </h3>
+                <svg class="plus" version="1.1" width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.216 226.216" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 226.216 226.216">
+                  <g>
+                    <path d="m217.515,104.407h-95.707v-95.706c0-5.22-3.48-8.701-8.701-8.701s-8.701,3.48-8.701,8.701v95.707h-95.705c-5.22,0-8.701,3.48-8.701,8.701s3.48,8.701 8.701,8.701h95.707v95.707c0,5.22 3.48,8.701 8.701,8.701s8.701-3.48 8.701-8.701v-95.707h95.707c5.22,0 8.701-3.48 8.701-8.701s-3.483-8.702-8.703-8.702z"/>
+                  </g>
+                </svg>
+                <svg class="minus" width="30" height="30" stroke="#000" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M912.208 548.409h-796.809c-20.1 0-36.411-16.31-36.411-36.409s16.311-36.409 36.41-36.409h796.809c20.134 0 36.409 16.31 36.409 36.409s-16.275 36.409-36.409 36.409z"  />
+                </svg>
+              </summary>
+              <div class="s-mod-no-padding product__accordion_content accordion__content rte" role="region" aria-labelledby="Summary-${block_id}-{{ section.id }}" id="${block_id}">
+                <ul class="list grid grid--3-col-desktop grid--2-col-tablet grid--1-col-mobile"></ul>
+              </div>
+            </details>
+          </div>
+        `;
+      const options = {
+        valueNames: [ 'title', 'lab_report', { data: ['id'] } ],
+        item: function(values) {
+          return `
+            <li class="grid__item lab_report--item color-{{ section.settings.color_scheme }}">
+              <span class="lab_report--item-title">${values.title}</span>
+              <a href="${values.lab_report}" target="_blank">View Lab Report</a>
+            </li>
+          `;
+        }
+      };
+      new List(block_id, options, results[key]);
+    });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.lab-results.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "t:sections.lab-results.settings.caption.label"
+    },
+    {
+      "type": "text",
+      "id": "classname",
+      "label": "t:sections.all.classname.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.lab-results.settings.heading.label",
+      "default": "Collapsible content"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.all.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.lab-results.settings.layout.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.lab-results.settings.layout.options__1.label"
+        },
+        {
+          "value": "row",
+          "label": "t:sections.lab-results.settings.layout.options__2.label"
+        },
+        {
+          "value": "section",
+          "label": "t:sections.lab-results.settings.layout.options__3.label"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "select",
+      "id": "container_color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-2",
+      "label": "t:sections.lab-results.settings.container_color_scheme.label",
+      "info": "t:sections.lab-results.settings.container_color_scheme.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "t:sections.lab-results.settings.open_first_collapsible_row.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.lab-results.settings.header.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.lab-results.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.lab-results.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.lab-results.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.lab-results.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.lab-results.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.lab-results.settings.desktop_layout.options__1.label"
+        },
+        {
+          "value": "image_second",
+          "label": "t:sections.lab-results.settings.desktop_layout.options__2.label"
+        }
+      ],
+      "default": "image_second",
+      "label": "t:sections.lab-results.settings.desktop_layout.label",
+      "info": "t:sections.lab-results.settings.desktop_layout.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.lab-results.presets.name"
+    }
+  ]
+}
+{% endschema %}

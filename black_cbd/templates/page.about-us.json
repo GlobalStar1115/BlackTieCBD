@@ -1,0 +1,707 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1656691138b3f3d93c": {
+      "type": "image-banner",
+      "blocks": {
+        "1656691138a6a9aa3d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Our Story<\/p>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "1656691138a6a9aa3d-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/cbd_thc.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "icon_with_text": {
+      "type": "icon-with-text",
+      "blocks": {
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Fast Free Shipping<br\/>On Every Product<\/p>"
+          }
+        },
+        "a74ea197-7663-4554-b779-f9ec56fffb3e": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Risk Free 30 Day<br\/>Money Back<\/p>"
+          }
+        },
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>100% Natural<br\/>Ingredients<\/p>"
+          }
+        },
+        "77d15db8-b77f-447a-97b1-ae408ced972a": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Lab Tested<br\/>For Accuracy<\/p>"
+          }
+        },
+        "9074d79d-b0b9-4492-b582-d33b02585eda": {
+          "type": "item",
+          "settings": {
+            "caption": "<p>Derived From Legal<br\/>Complaint Hemp<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "42c1d942-5cba-45d6-a76c-8d461e543ad9",
+        "a74ea197-7663-4554-b779-f9ec56fffb3e",
+        "7da6aa7c-c715-4d2b-b850-21fafede1ff8",
+        "77d15db8-b77f-447a-97b1-ae408ced972a",
+        "9074d79d-b0b9-4492-b582-d33b02585eda"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6"
+      }
+    },
+    "1656978315126315d5": {
+      "type": "contact-us",
+      "settings": {
+        "classname": "about-us",
+        "heading_desktop": "Want to talk?",
+        "heading_mobile": "Want to",
+        "subheading": "Hours of Operation",
+        "description": "We’re here 10am - 6:30pm EST every day",
+        "call_us": "CALL US",
+        "phone_no": "+1 (888)702-2285",
+        "chat_with_us": "CHAT WITH US",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "165669325656d211b4": {
+      "type": "image-with-text",
+      "blocks": {
+        "16566932565b6c1ae8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "16566932565b6c1ae8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie was established in 2018, but before that, we were a group of experienced growers who wanted to create something unique and impactful. In 2014, we crossbred our hemp and cannabis to create legal hemp products that were simultaneously potent in CBD and unique in its effect.<br\/><br\/>2018 ushered in the Farm Bill, allowing for interstate commerce of hemp products. This led us to creating Black Tie CBD, an online CBD company that offers a wide range of high-quality hemp and CBD products nationwide.<br\/><br\/>We’re proud to produce the majority of the strains we sell on our store. We farm five different properties, spanning nearly 200 acres of hemp production. This means we’re able to offer a variety of different strains to suit everyone from newbies to hemp connoisseurs.<br\/><br\/>Our ultimate vision is to provide premium products at an affordable price, so that more people get to experience the magic of Black Tie CBD for themselves.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16566932565b6c1ae8-0",
+        "16566932565b6c1ae8-1"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image": "shopify:\/\/shop_images\/pdpimg_b2946ca5-e294-4e19-a0da-cdb18f56c580.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1656693328316d6ea9": {
+      "type": "image-with-text",
+      "blocks": {
+        "16566933289463ccf0-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "AWARD-WINNING  HEMP PRODUCTS",
+            "heading_size": "h1"
+          }
+        },
+        "16566933289463ccf0-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie hemp isn’t just beloved by our customers. Despite being a relatively new establishment, Black Tie has already won numerous awards for our CBD and hemp products.<br\/><br\/>In March of 2019, we entered our hemp flowers into the High Times DOPE Cup: High Desert, a cannabis competition hosted by High Times Magazine. Our federally compliant hemp flowers, containing less than 0.3 percent THC, competed alongside numerous marijuana based CBD flowers. We came in 2nd place in the “Best CBD Flower” category, making history, as it was the first time that industrial hemp was used vs marijuana in a High Times cannabis competition. <br\/><br\/>Later in 2019, Black Tie CBD won a second accolade, this time at the Oregon Grower’s Cup. We entered our Lemon Cream Diesel flowers—one of the first (pleasant) smokable CBG strains to hit the market. Lemon Cream Diesel, with genetics provided by Oregon CBD, The Lemon Cream Diesel has a CBG content of over 20 percent. The high CBG content produces a unique and cerebral effect on the smoker. This strain won “Best Hemp Flower” due to its rare genetics, unusual effects, and smooth smoke.<br\/><br\/>To top it all off, we won first place for “Best CBD Product” at the Oregon Grower’s Cup for our solventless, dry-ice kief. This kief is made from our Bleu Cheese strain of CBD hemp flowers, produced by our friend Abe at North Star Hemp in Portland, Oregon.<br\/><br\/>Unfortunately, COVID19 has put a pause on most competitions and awards ceremonies—but we have no intention to stop prioritizing high-quality, well-loved CBD products and to keep pushing ourselves to produce award-worthy products.<br\/><br\/>Curious about the caliber of our products? Please check out our lab reports. All items are tested by a third-party lab to ensure we live up to the standards we set for our products.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16566933289463ccf0-3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16566933289463ccf0-0",
+        "16566933289463ccf0-1",
+        "16566933289463ccf0-3"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image": "shopify:\/\/shop_images\/crystalweed-cannabis-uIfWqKSiHBE-unsplash.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "1656699171c00d4499": {
+      "type": "image-with-text",
+      "blocks": {
+        "165669917128e12e7f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHAT SETS BLACK TIE CBD APART FROM OTHER COMPANIES?",
+            "heading_size": "h1"
+          }
+        },
+        "165669917128e12e7f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD has one central mission: to improve the well-being of our customers while raising the hemp industry’s standard of excellence.<br\/><br\/>As an award-winning CBD company, we prioritize quality while offering a range of CBD products at an affordable price.<br\/><br\/>We’re proud to say that our hemp products are lab-tested and US-grown—but we consider these to be the absolute minimum requirements for an establishment in our industry. What really sets us apart from the competition is our commitment to innovation and quality as well as customer satisfaction.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "165669917128e12e7f-0",
+        "165669917128e12e7f-1"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image": "shopify:\/\/shop_images\/High-Resin_Hemp_BlackTieCBD.Net.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16564411709f642eee": {
+      "type": "info-image-slider",
+      "blocks": {
+        "e1080b5f-18ca-461e-b6ae-fbcc807d99af": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pdpimg_b2946ca5-e294-4e19-a0da-cdb18f56c580.png",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "d0dad577-c7d2-4b86-aaf6-7fd281e37618": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BR_5.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "231ed804-3da0-47dc-b424-5cffd95222ab": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cbd-vs-thc-the-key-differences.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "27552238-477c-4f60-96e8-07b2084d6f40": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LS_6-min_1.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "8c25b8a5-dabf-4f53-bc84-f5014db9266c": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/is-cbd-coffee-good-for-your-health.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        },
+        "28d5ffae-913a-44a2-8745-3eacd791494a": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how-to-enjoy-cannabis-without-smoking-it-1.jpg",
+            "review_score": 4.5,
+            "review_star_color": "#263745",
+            "review_name": "Rachel F.",
+            "review_city": "Los Angeles",
+            "review_text": "<p>Black Tie hemp is organically grown right in Oregon. We farm 5 different propertiBlack Tie hemp is organically grown right in Oregon. We farm 5 different properti<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e1080b5f-18ca-461e-b6ae-fbcc807d99af",
+        "d0dad577-c7d2-4b86-aaf6-7fd281e37618",
+        "231ed804-3da0-47dc-b424-5cffd95222ab",
+        "27552238-477c-4f60-96e8-07b2084d6f40",
+        "8c25b8a5-dabf-4f53-bc84-f5014db9266c",
+        "28d5ffae-913a-44a2-8745-3eacd791494a"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "heading": "What makes us different",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "height": "adapt",
+        "add_image_padding": false,
+        "layout": "full_width",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "ptop_mob": 40,
+        "pbottom_mob": 40,
+        "sectionbg": "#ffffff"
+      }
+    },
+    "review_rating": {
+      "type": "review-rating",
+      "blocks": {
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e": {
+          "type": "stars",
+          "settings": {
+            "star_color": "#e7a600"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "3,756 reviews and counting!",
+            "heading_color": "#00ffff"
+          }
+        },
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01": {
+          "type": "caption",
+          "settings": {
+            "text": "FREE SHIPPING On orders over $100, arrives in 2 - 7 days.",
+            "caption_color": "#00ffff"
+          }
+        }
+      },
+      "block_order": [
+        "236381fe-ed3f-428d-af8f-aee9e2ca563e",
+        "heading",
+        "b7aab946-2e7c-49a4-a7d8-813e535cec01"
+      ],
+      "settings": {
+        "background_color": "#b3c8c6",
+        "rate": 3.4,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 40,
+        "margin_bottom": 0
+      }
+    },
+    "1656683046d01debe3": {
+      "type": "multicolumn",
+      "blocks": {
+        "1656683046a7dd7986-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1656683046a7dd7986-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1656683046a7dd7986-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "008116b5-0b05-4cd5-8c3e-5b06fe4adb59": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "905e0910-cfb6-44e6-bcfc-846d39a35b1d": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "fa2a9f23-3405-4986-9a4a-0ffbe0959032": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "41db4fc8-cdc2-4ae7-a198-d086a9b920fc": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c0a8c9c8-54cd-4351-8b83-f46d6e6606d1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "50ab75d1-b2ea-41bd-a463-35eb290b85d7": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656683046a7dd7986-0",
+        "1656683046a7dd7986-1",
+        "1656683046a7dd7986-2",
+        "008116b5-0b05-4cd5-8c3e-5b06fe4adb59",
+        "905e0910-cfb6-44e6-bcfc-846d39a35b1d",
+        "fa2a9f23-3405-4986-9a4a-0ffbe0959032",
+        "41db4fc8-cdc2-4ae7-a198-d086a9b920fc",
+        "c0a8c9c8-54cd-4351-8b83-f46d6e6606d1",
+        "50ab75d1-b2ea-41bd-a463-35eb290b85d7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third-four",
+        "image_ratio": "adapt",
+        "columns_desktop": 9,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "16588858530cc951cc": {
+      "type": "apps",
+      "blocks": {
+        "aa272fcc-ffae-4249-8bd5-c31ed798181a": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "aa272fcc-ffae-4249-8bd5-c31ed798181a"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16588859114b151b39": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All your favorites<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Tie CBD Specialists’ hand-picked the newest and most sought after hemp products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "1655747784959fb18c": {
+      "type": "collection-list",
+      "blocks": {
+        "165574778475340ea3-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-smokeables"
+          }
+        },
+        "165574778475340ea3-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "edibles"
+          }
+        },
+        "165574778475340ea3-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cbd-tinctures"
+          }
+        },
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "thc-products"
+          }
+        }
+      },
+      "block_order": [
+        "165574778475340ea3-0",
+        "165574778475340ea3-1",
+        "165574778475340ea3-2",
+        "12cfa551-3a24-49be-839b-f8b7ed0a298a"
+      ],
+      "settings": {
+        "classname": "homepage",
+        "image_size": 100,
+        "image_border_radius": 0,
+        "horizontal_spacing": 5,
+        "vertical_spacing": 5,
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_source": "color-picker",
+        "color_scheme": "background-2",
+        "background_color": "#f8f6f4",
+        "show_view_all": false,
+        "show_shop_all": true,
+        "columns_mobile": "2",
+        "mobile_layout": "vertical",
+        "swipe_on_mobile": false,
+        "caption_on_desktop": true,
+        "caption_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "has_collection_bg": false,
+        "card_bg_mobile": "#ffffff",
+        "card_bg_desktop": "rgba(0,0,0,0)"
+      }
+    },
+    "1656089938cadc5019": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16560899380a0de027-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "This seems to good to be true, is buying hemp online legal?",
+            "icon": "none",
+            "row_content": "<p>Thanks to the passing of the Farm Bill in 2018, interstate commerce of hemp was legalized. Now you can absolutely legally buy and enjoy products from Black Tie CBD store. Remember, Black Tie hemp dispensary may only sell cannabis to adult customers.<\/p>",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m new to cannabis. Can I get advice on buying cannabis from a cannabis store?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that I am purchasing reliable cbd products?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "16560899380a0de027-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a doctor’s prescription to buy cbd from blacktiecbd.Net?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Help me delay my next shipment!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "db4fc97e-8228-4a28-a766-20198ea042f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see your question above?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "2b50a75b-2820-4344-91e3-ece90bd419ba": {
+          "type": "footer",
+          "settings": {
+            "is_link": false,
+            "text": "More questions?",
+            "link": ""
+          }
+        },
+        "1421d7b2-592c-427f-9db8-d62282582357": {
+          "type": "footer",
+          "settings": {
+            "is_link": true,
+            "text": "View Our FAQs Page",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16560899380a0de027-0",
+        "16560899380a0de027-1",
+        "16560899380a0de027-2",
+        "16560899380a0de027-3",
+        "9f5043ce-766c-4e91-867b-4f91b1093ce9",
+        "db4fc97e-8228-4a28-a766-20198ea042f1",
+        "2b50a75b-2820-4344-91e3-ece90bd419ba",
+        "1421d7b2-592c-427f-9db8-d62282582357"
+      ],
+      "settings": {
+        "caption": "",
+        "classname": "homepage",
+        "heading": "frequently asked question",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1656691138b3f3d93c",
+    "icon_with_text",
+    "1656978315126315d5",
+    "165669325656d211b4",
+    "1656693328316d6ea9",
+    "1656699171c00d4499",
+    "16564411709f642eee",
+    "review_rating",
+    "1656683046d01debe3",
+    "16588858530cc951cc",
+    "16588859114b151b39",
+    "rich_text",
+    "1655747784959fb18c",
+    "1656089938cadc5019"
+  ]
+}
